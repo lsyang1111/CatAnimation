@@ -1,0 +1,84 @@
+"""
+submit_veo_jobs.py
+==================
+Submits 4 Veo video generation jobs and saves operation names to ops.txt
+"""
+import os, sys
+
+API_KEY = os.environ.get("GEMINI_API_KEY")
+if not API_KEY:
+    print("ERROR: GEMINI_API_KEY not set", flush=True)
+    sys.exit(1)
+
+from google import genai
+from google.genai import types
+
+client = genai.Client(api_key=API_KEY)
+out_dir = r"c:\Users\lsyan\Documents\Code\CatAnimation"
+
+SHOT_CONFIGS = [
+    {
+        "output_name": "shot1.mp4",
+        "image_path": os.path.join(out_dir, "storyboards", "shot1_20260904_215307.png"),
+        "prompt": """Photorealistic 3D animation, 4 seconds. Cozy warm cafe interior.
+The cat barista holds a POS card reader toward the camera with its right paw.
+A credit card taps the device. The green screen light flashes with confirmation.
+The cat nods gently with a professional friendly smile, then slowly places the POS machine down on the far-left corner of the counter.
+Smooth subtle cinematic camera motion. Warm golden ambient cafe lighting.""",
+    },
+    {
+        "output_name": "shot2.mp4",
+        "image_path": os.path.join(out_dir, "storyboards", "shot2_20260904_215331.png"),
+        "prompt": """Photorealistic 3D animation, 4 seconds. Continuation from Shot 1.
+The cat barista tilts the Moka pot to pour dark espresso into the white ceramic mug.
+While pouring, the cat's eyes drift sideways toward the small milk jug on the counter with a longing, tempted expression.
+The cat's cheeks flush slightly with inner conflict between duty and desire.
+Smooth subtle cinematic motion. Warm golden cafe lighting.""",
+    },
+    {
+        "output_name": "shot3.mp4",
+        "image_path": os.path.join(out_dir, "storyboards", "shot3_20260904_215351.png"),
+        "prompt": """Photorealistic 3D animation, 4 seconds. Continuation from Shot 2.
+The cat leans forward and sneaks a sip from the milk jug — unable to resist any longer.
+Eyes close slowly in pure bliss. A tiny drop of white milk appears on the pink nose and the corner of the mouth.
+The cat's shoulders hunch in slightly, as if hoping nobody saw. Blushing cheeks, a suppressed happy smile.
+Smooth cinematic motion. Warm golden cafe lighting.""",
+    },
+    {
+        "output_name": "shot4.mp4",
+        "image_path": os.path.join(out_dir, "storyboards", "shot4_20260904_215409.png"),
+        "prompt": """Photorealistic 3D animation, 4 seconds. Continuation from Shot 3. Final shot.
+The cat quickly straightens up, resumes professional posture, eyes open wide with a warm sweet smile.
+The cat lifts the white ceramic mug with heart latte art with both paws and gently extends it toward the viewer.
+Eyes twinkle with cheerful, slightly sheepish warmth.
+Smooth gentle cinematic motion. Warm golden cafe lighting.""",
+    },
+]
+
+ops_file = os.path.join(out_dir, "veo_ops.txt")
+print("Submitting 4 Veo jobs...", flush=True)
+
+with open(ops_file, "w") as f:
+    for shot in SHOT_CONFIGS:
+        name = shot["output_name"]
+        img_path = shot["image_path"]
+        print(f"  Submitting {name}...", flush=True)
+        with open(img_path, "rb") as img_f:
+            img_bytes = img_f.read()
+        ext = os.path.splitext(img_path)[1].lower()
+        mime = "image/jpeg" if ext in (".jpg", ".jpeg") else "image/png"
+        op = client.models.generate_videos(
+            model="veo-3.1-fast-generate-preview",
+            prompt=shot["prompt"],
+            image=types.Image(
+                image_bytes=img_bytes,
+                mime_type=mime,
+            ),
+        )
+        line = f"{name}|{op.name}"
+        f.write(line + "\n")
+        f.flush()
+        print(f"  [SUBMITTED] {name} -> {op.name}", flush=True)
+
+print(f"\nAll 4 jobs submitted! Operation names saved to: {ops_file}", flush=True)
+print("Now run: python poll_veo_jobs.py", flush=True)

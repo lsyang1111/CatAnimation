@@ -1,9 +1,15 @@
 """
 generate_nini_video.py
 ======================
-Generates 3 video clips (4s each) based on Nini's storyboards using Veo 3.1,
-polls until complete, downloads shot1.mp4, shot2.mp4, shot3.mp4,
-concatenates them into nini_final_12s.mp4, and pushes to GitHub.
+Generates 4 video clips (4s each) based on Nini's storyboards using Veo 3.1,
+polls until complete, downloads shot1.mp4 ~ shot4.mp4,
+concatenates them into nini_final_16s.mp4.
+
+Story: Nini the calico cat barista (16 seconds total):
+  Shot 1 (0-4s):  Card payment confirmation
+  Shot 2 (4-8s):  Pouring coffee, eyes drifting to milk jug
+  Shot 3 (8-12s): Can't resist — sneaks a sip of milk
+  Shot 4 (12-16s): Pretends nothing happened, serves coffee with guilty smile
 """
 
 import os
@@ -28,43 +34,44 @@ out_dir = r"c:\Users\lsyan\Documents\Code\CatAnimation"
 SHOT_CONFIGS = [
     {
         "output_name": "shot1.mp4",
-        "image_path": os.path.join(out_dir, "storyboards", "shot1_20260904_203901.png"),
-        "prompt": """Photorealistic 3D animation, 4 seconds.
-A gentle calico cat Nini (white fur with orange and black patches, green eyes, white chest, short cute small cat proportions) wearing a brown leather apron stands behind a dark wooden barista counter inside a cozy warm cafe.
-BACKGROUND: espresso machine on viewer's left background, dark wooden shelves on viewer's right background, hanging Edison bulb lights with soft golden bokeh.
-Counter: Center has ONE empty white ceramic mug. Right counter has ONE small classic Bialetti Moka Express octagonal aluminum Moka pot (mustache man logo on front, black handle strictly on RIGHT side).
-The cat holds ONE light grey POS card reader with glowing green screen up with its right paw on viewer's LEFT toward camera.
-A credit card taps the device. Green confirmation light flashes.
-ONLY AFTER green light: cat nods gently and places POS machine on far left of counter.
-Cinematic warm golden cafe lighting, 8K fur texture.""",
+        "image_path": os.path.join(out_dir, "storyboards", "shot1_20260904_215307.png"),
+        "prompt": """Photorealistic 3D animation, 4 seconds. Cozy warm cafe interior.
+The cat barista holds a POS card reader toward the camera with its right paw.
+A credit card taps the device. The green screen light flashes with confirmation.
+The cat nods gently with a professional friendly smile, then slowly places the POS machine down on the far-left corner of the counter.
+Smooth subtle cinematic camera motion. Warm golden ambient cafe lighting.""",
     },
     {
         "output_name": "shot2.mp4",
-        "image_path": os.path.join(out_dir, "storyboards", "shot2_20260904_205549.png"),
+        "image_path": os.path.join(out_dir, "storyboards", "shot2_20260904_215331.png"),
         "prompt": """Photorealistic 3D animation, 4 seconds. Continuation from Shot 1.
-SAME calico cat Nini (white/orange/black patches, green eyes, short cute small cat proportions) WEARING THE EXACT SAME BROWN LEATHER APRON behind dark wooden counter.
-BACKGROUND: same warm cafe interior — espresso machine on viewer's left, dark wooden shelves on viewer's right, golden bokeh.
-Counter: Light grey POS machine rests ALONE on far-left corner (no paws touching). ONE white ceramic mug STATIONARY in center.
-Cat uses its LEFT PAW (on viewer's right) to hold the Bialetti Moka pot by its RIGHT-SIDE black plastic handle, tilting the spout from the right to pour dark espresso into the center mug.
-Moka pot has iconic Bialetti mustache man logo printed on front.
-Cinematic warm golden cafe lighting, 8K fur detail.""",
+The cat barista tilts the Moka pot to pour dark espresso into the white ceramic mug.
+While pouring, the cat's eyes drift sideways toward the small milk jug on the counter with a longing, tempted expression.
+The cat's cheeks flush slightly with inner conflict between duty and desire.
+Smooth subtle cinematic motion. Warm golden cafe lighting.""",
     },
     {
         "output_name": "shot3.mp4",
-        "image_path": os.path.join(out_dir, "storyboards", "shot3_20260904_203151.png"),
+        "image_path": os.path.join(out_dir, "storyboards", "shot3_20260904_215351.png"),
         "prompt": """Photorealistic 3D animation, 4 seconds. Continuation from Shot 2.
-Close-up shot of SAME calico cat Nini (white/orange/black fur patches, green eyes, white chest, adorable small cat proportions) WEARING THE EXACT SAME BROWN LEATHER APRON.
-BACKGROUND: same warm blurred cafe interior with golden bokeh lights.
-On dark wooden counter on viewer's right: Bialetti Moka pot with black handle on right and mascot logo on front.
-The cat lifts the SAME white ceramic mug (perfect heart latte art on top) with BOTH PAWS to offer it to the viewer.
-Expression: A sweet, warm, polite, professional barista smile with twinkling green eyes, looking directly at the viewer with customer-service warmth. No tongue sticking out.
-Cat softly extends the mug toward the viewer with both paws.
-Soft warm golden cinematic lighting, 8K calico fur texture.""",
+The cat leans forward and sneaks a sip from the milk jug — unable to resist any longer.
+Eyes close slowly in pure bliss. A tiny drop of white milk appears on the pink nose and the corner of the mouth.
+The cat's shoulders hunch in slightly, as if hoping nobody saw. Blushing cheeks, a suppressed happy smile.
+Smooth cinematic motion. Warm golden cafe lighting.""",
+    },
+    {
+        "output_name": "shot4.mp4",
+        "image_path": os.path.join(out_dir, "storyboards", "shot4_20260904_215409.png"),
+        "prompt": """Photorealistic 3D animation, 4 seconds. Continuation from Shot 3. Final shot.
+The cat quickly straightens up, resumes professional posture, eyes open wide with a warm sweet smile.
+The cat lifts the white ceramic mug with heart latte art with both paws and gently extends it toward the viewer.
+Eyes twinkle with cheerful, slightly sheepish warmth — hoping the customer didn't notice the sneaky milk sip.
+Smooth gentle cinematic motion. Warm golden cafe lighting.""",
     },
 ]
 
 print("==================================================")
-print("🎬 Submitting Veo 3.1 video generation tasks...")
+print("Submitting Veo 3.1 video generation tasks...")
 print("==================================================")
 
 operations = []
@@ -84,7 +91,7 @@ for shot in SHOT_CONFIGS:
     operations.append((name, op.name))
 
 print("\n==================================================")
-print("⏳ Polling and downloading video clips...")
+print("Polling and downloading video clips...")
 print("==================================================")
 
 completed = set()
@@ -108,7 +115,7 @@ while len(completed) < len(operations):
                         save_path = os.path.join(out_dir, filename)
                         with open(save_path, "wb") as f:
                             f.write(video_res.content)
-                        print(f"  [SAVED] {filename} ({len(video_res.content)} bytes) to {save_path}")
+                        print(f"  [SAVED] {filename} ({len(video_res.content)} bytes) -> {save_path}")
                         completed.add(filename)
                 elif "error" in res:
                     print(f"  [ERROR] {filename}: {res['error']}")
@@ -123,5 +130,5 @@ while len(completed) < len(operations):
         time.sleep(15)
 
 print("\n==================================================")
-print("🎉 All video clips downloaded successfully!")
+print("All video clips downloaded! Now run concat_videos.py to create nini_final_16s.mp4")
 print("==================================================")

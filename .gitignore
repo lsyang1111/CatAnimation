@@ -1,0 +1,12 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Runtime state / temp files
+veo_ops.txt
+*.log
+
+# Generated videos (binary assets created during rendering)
+output/
+*.mp4
