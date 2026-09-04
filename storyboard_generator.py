@@ -1,11 +1,17 @@
 """
 storyboard_generator.py
 =======================
-標準分鏡圖生成工具
-用法：直接修改下方 SHOTS 清單，執行腳本即可生成分鏡圖並輸出 HTML 預覽頁面。
+Standard storyboard image generator.
+Usage: Edit the SHOTS list below, then run this script.
 
-pip install google-generativeai pillow
+pip install google-genai pillow
 """
+import sys
+import io
+# Fix Windows console encoding
+if sys.stdout.encoding != 'utf-8':
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace')
 
 import os
 import base64
@@ -86,22 +92,28 @@ def generate_storyboard_image(shot: dict, client) -> str:
     full_prompt = GLOBAL_CONSTRAINTS.strip() + "\n\n" + shot["prompt"].strip()
 
     print(f"  Generating {shot['id']}: {shot['title']} ...")
-    response = client.models.generate_images(
-        model="imagen-3.0-generate-002",
-        prompt=full_prompt,
-        config=types.GenerateImagesConfig(
-            number_of_images=1,
-            aspect_ratio="16:9",
-            safety_filter_level="BLOCK_ONLY_HIGH",
+    response = client.models.generate_content(
+        model="gemini-2.5-flash-image",
+        contents=full_prompt,
+        config=types.GenerateContentConfig(
+            response_modalities=["IMAGE", "TEXT"],
         ),
     )
-    image_data = response.generated_images[0].image.image_bytes
+    # Extract image bytes from response parts
+    image_data = None
+    for part in response.candidates[0].content.parts:
+        if part.inline_data is not None:
+            image_data = part.inline_data.data
+            break
+    if image_data is None:
+        raise ValueError(f"No image returned for {shot['id']}. Response: {response.text}")
+
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     filename = f"{shot['id']}_{timestamp}.png"
     filepath = os.path.join(OUTPUT_DIR, filename)
     with open(filepath, "wb") as f:
-        f.write(image_data)
-    print(f"  ✅ Saved: {filepath}")
+        f.write(base64.b64decode(image_data) if isinstance(image_data, str) else image_data)
+    print(f"  [OK] Saved: {filepath}")
     return filepath
 
 
@@ -176,17 +188,17 @@ def generate_html_preview(shots: list, image_paths: list) -> str:
 
 
 def main():
-    print(f"\n🎬 [{PROJECT_NAME}] 分鏡圖生成開始\n")
+    print(f"\n[START] [{PROJECT_NAME}] 分鏡圖生成開始\n")
     client = genai.Client(api_key=API_KEY)
     image_paths = []
     for shot in SHOTS:
         path = generate_storyboard_image(shot, client)
         image_paths.append(path)
 
-    print("\n📄 生成 HTML 預覽頁面 ...")
+    print("\n[HTML] 生成 HTML 預覽頁面 ...")
     html_path = generate_html_preview(SHOTS, image_paths)
-    print(f"✅ 預覽頁面：{html_path}")
-    print("\n🎉 完成！請用瀏覽器開啟預覽頁面確認分鏡，滿意後再提交影片生成任務。\n")
+    print(f"[OK] 預覽頁面：{html_path}")
+    print("\n[DONE] 完成！請用瀏覽器開啟預覽頁面確認分鏡，滿意後再提交影片生成任務。\n")
 
 
 if __name__ == "__main__":
