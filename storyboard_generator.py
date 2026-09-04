@@ -35,7 +35,7 @@ GLOBAL_CONSTRAINTS = """
 === HARD CONSTRAINTS (NEVER VIOLATE) ===
 - CAT PROPORTIONS: Small compact cat body height, short cute paws, realistic small cat proportions (not tall humanoid). Wooden counter top reaches up to cat's chest/shoulder level so cat looks cute, small and short.
 - ONE white ceramic mug. NEVER changes shape, size, or style.
-- VINTAGE MOKA POT (EXACT SAME IN ALL SHOTS): Classic octagonal Bialetti-style aluminum Moka pot with an iconic mustache-man mascot logo prominently engraved/printed on the front chamber wall, dark vintage weathered matte finish with subtle patina, scratches, and rustic edge wear (looks well-loved and vintage). Black handle on RIGHT SIDE ONLY. Shape, logo, and vintage wear pattern NEVER change across shots.
+- BIALETTI MOKA POT (EXACT SAME IN ALL SHOTS): Classic octagonal Bialetti Moka Express aluminum Moka pot with glossy silver/grey metallic finish and subtle vintage aged patina. Prominently features the iconic black line-art logo of 'the little man with a mustache raising one finger' (l'omino coi baffi) printed on the upper octagonal chamber face, with 'BIALETTI' text underneath it, and a silver ring band below it reading 'Moka Express'. Black curved plastic handle on RIGHT SIDE ONLY. Shape, logo, and vintage metal finish NEVER change across shots.
 - Cat does NOT start coffee-making until AFTER green payment light confirms.
 - All objects obey gravity. Nothing floats.
 === END CONSTRAINTS ===
@@ -55,7 +55,7 @@ BACKGROUND: warm cafe interior with wooden shelves holding coffee bags and jars,
 a professional espresso machine visible behind, hanging Edison bulb lights,
 soft golden bokeh — the cat looks like a sweet part-time cafe worker.
 Counter has ONLY TWO items: ONE empty white ceramic mug in center,
-ONE vintage weathered aluminum octagonal Moka pot with visible engraved mascot logo on the front face (Bialetti-style, rustic aged metal finish, black handle on the RIGHT side).
+ONE classic Bialetti Moka Express octagonal aluminum Moka pot (silver-grey metallic vintage finish with iconic mustache man raising finger logo printed on front chamber wall, black handle on the RIGHT side).
 There is NO POS machine on the counter table.
 The cat holds ONE POS card reader up with its right paw toward the camera — the ONLY POS machine in scene.
 Green confirmation light glows on the POS screen in the cat's paw.
@@ -71,7 +71,7 @@ in brown leather apron behind a wooden barista counter inside a cozy cafe (count
 BACKGROUND: same warm cafe interior — wooden shelves with coffee bags, espresso machine, Edison bulb lights, golden bokeh.
 Counter: POS card machine placed on far LEFT corner (still visible), ONE white ceramic mug stationary in center
 receiving dark espresso being poured.
-Cat grips the EXACT SAME vintage weathered aluminum octagonal Moka pot with visible front engraved mascot logo by its RIGHT-SIDE black handle,
+Cat grips the EXACT SAME Bialetti Moka Express octagonal aluminum Moka pot (with iconic mustache man raising finger logo on front) by its RIGHT-SIDE black handle,
 tilting it to pour (shape and logo unchanged, angle only). Warm steam rising from the mug.
 Cinematic warm cafe lighting, 8K calico fur detail.""",
     },
@@ -83,7 +83,7 @@ Cinematic warm cafe lighting, 8K calico fur detail.""",
 SAME calico cat Nini (white fur with orange and black patches, green eyes, white chest, adorable small cat proportions)
 in brown leather apron.
 BACKGROUND: warm blurred cafe interior with golden bokeh lights and wooden shelves.
-On the wooden counter next to the cat: the EXACT SAME vintage weathered aluminum Moka pot with visible engraved mascot logo on front.
+On the wooden counter next to the cat: the EXACT SAME Bialetti Moka Express octagonal aluminum Moka pot with iconic mustache man raising finger logo on front.
 Cat holds ONE white ceramic mug with heart-shaped latte art with BOTH PAWS —
 caught licking milk foam with its small pink tongue.
 Expression: NOT guilty smirk — the most innocent, soft, doe-eyed look.
