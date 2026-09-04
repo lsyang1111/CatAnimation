@@ -12,6 +12,7 @@
 ```
 === HARD CONSTRAINTS (NEVER VIOLATE) ===
 - Cat character: calico cat, white fur with orange and black patches, green eyes, white chest — NEVER changes appearance.
+- CAT PROPORTIONS: Small compact cat body height, short cute paws, realistic small cat proportions (not tall humanoid). Wooden counter top reaches up to cat's chest/shoulder level so cat looks cute, small and short.
 - ONE white ceramic mug. NEVER changes shape, size, or style throughout all shots.
 - Classic dark aluminum octagonal Moka pot (Bialetti-style). Black handle RIGHT SIDE ONLY. Shape never changes.
 - POS card machine stays visible on LEFT side of counter at ALL times after being set down.

@@ -26,9 +26,14 @@ from google.genai import types
 
 PROJECT_NAME = "三花貓妮妮咖啡廳系列"
 
+# 參考照片路徑（設定後 AI 會以這張照片作為角色外觀基準）
+# 設為 None 則不使用參考照片
+REFERENCE_IMAGE_PATH = r"C:\Users\lsyan\.gemini\antigravity\brain\025f4dfe-4e20-42c2-b62d-325ae710468f\media__1788487658361.jpg"
+
 # 全局硬性規則（會自動加到每段 prompt 前面）
 GLOBAL_CONSTRAINTS = """
 === HARD CONSTRAINTS (NEVER VIOLATE) ===
+- CAT PROPORTIONS: Small compact cat body height, short cute paws, realistic small cat proportions (not tall humanoid). Wooden counter top reaches up to cat's chest/shoulder level so cat looks cute, small and short.
 - ONE white ceramic mug. NEVER changes shape, size, or style.
 - Octagonal metal Moka pot. Black handle on RIGHT SIDE ONLY. Shape never changes.
 - Cat does NOT start coffee-making until AFTER green payment light confirms.
@@ -41,9 +46,10 @@ SHOTS = [
     {
         "id": "shot1",
         "title": "Shot 1（0–4s）：索卡付款",
-        "description": "妮妮右爪持 POS 機遞向鏡頭，顧客刷卡，綠燈確認後放下 POS 機開始製作咖啡",
+        "description": "矮矮可愛的妮妮右爪持 POS 機遞向鏡頭，顧客刷卡，綠燈確認後放下 POS 機開始製作咖啡",
         "prompt": """Photorealistic 3D rendered storyboard frame. A gentle calico cat named Nini
 (white fur with orange and black patches, green eyes, white chest)
+with a cute short body height and small compact cat proportions (counter top reaches up to its chest),
 wearing a brown leather apron, standing behind a wooden barista counter inside a cozy cafe.
 BACKGROUND: warm cafe interior with wooden shelves holding coffee bags and jars,
 a professional espresso machine visible behind, hanging Edison bulb lights,
@@ -58,10 +64,10 @@ Cinematic warm cafe lighting, 8K fur texture.""",
     {
         "id": "shot2",
         "title": "Shot 2（4–8s）：倒咖啡 + 奶泡拉花",
-        "description": "妮妮傾斜摩卡壺（造型不變）倒入同一個白瓷杯，接著用奶泡壺拉出愛心",
+        "description": "矮矮可愛的妮妮傾斜摩卡壺（造型不變）倒入同一個白瓷杯，接著用奶泡壺拉出愛心",
         "prompt": """Photorealistic 3D rendered storyboard frame. Continuation from Shot 1.
-SAME calico cat Nini (white fur with orange and black patches, green eyes, white chest)
-in brown leather apron behind a wooden barista counter inside a cozy cafe.
+SAME calico cat Nini (white fur with orange and black patches, green eyes, white chest, short cute small cat proportions)
+in brown leather apron behind a wooden barista counter inside a cozy cafe (counter height reaches cat's chest level).
 BACKGROUND: same warm cafe interior — wooden shelves with coffee bags, espresso machine, Edison bulb lights, golden bokeh.
 Counter: POS card machine placed on far LEFT corner (still visible), ONE white ceramic mug stationary in center
 receiving dark espresso being poured.
@@ -72,9 +78,9 @@ Cinematic warm cafe lighting, 8K calico fur detail.""",
     {
         "id": "shot3",
         "title": "Shot 3（8–12s）：偷舔奶泡 ➔ 楚楚可憐遞給你",
-        "description": "妮妮雙爪捧杯偷舔奶泡被抓包，露出最無辜楚楚可憐的表情，輕輕遞出咖啡",
+        "description": "矮矮嬌小的妮妮雙爪捧杯偷舔奶泡被抓包，露出最無辜楚楚可憐的表情，輕輕遞出咖啡",
         "prompt": """Photorealistic 3D rendered storyboard frame. Close-up shot inside a cozy cafe.
-SAME calico cat Nini (white fur with orange and black patches, green eyes, white chest)
+SAME calico cat Nini (white fur with orange and black patches, green eyes, white chest, adorable small cat proportions)
 in brown leather apron.
 BACKGROUND: warm blurred cafe interior with golden bokeh lights and wooden shelves.
 Cat holds ONE white ceramic mug with heart-shaped latte art with BOTH PAWS —
@@ -102,9 +108,24 @@ def generate_storyboard_image(shot: dict, client) -> str:
     full_prompt = GLOBAL_CONSTRAINTS.strip() + "\n\n" + shot["prompt"].strip()
 
     print(f"  Generating {shot['id']}: {shot['title']} ...")
+
+    # Build contents: include reference image if provided
+    if REFERENCE_IMAGE_PATH and os.path.exists(REFERENCE_IMAGE_PATH):
+        with open(REFERENCE_IMAGE_PATH, "rb") as f:
+            image_bytes = f.read()
+        ext = os.path.splitext(REFERENCE_IMAGE_PATH)[1].lower()
+        mime = "image/jpeg" if ext in (".jpg", ".jpeg") else "image/png"
+        contents = [
+            types.Part(text="This is the reference cat. Preserve its exact appearance in the generated image:\n" + full_prompt),
+            types.Part(inline_data=types.Blob(mime_type=mime, data=image_bytes)),
+        ]
+        print(f"  [REF] Using reference photo: {os.path.basename(REFERENCE_IMAGE_PATH)}")
+    else:
+        contents = full_prompt
+
     response = client.models.generate_content(
         model="gemini-2.5-flash-image",
-        contents=full_prompt,
+        contents=contents,
         config=types.GenerateContentConfig(
             response_modalities=["IMAGE", "TEXT"],
         ),
@@ -116,7 +137,7 @@ def generate_storyboard_image(shot: dict, client) -> str:
             image_data = part.inline_data.data
             break
     if image_data is None:
-        raise ValueError(f"No image returned for {shot['id']}. Response: {response.text}")
+        raise ValueError(f"No image returned for {shot['id']}.")
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     filename = f"{shot['id']}_{timestamp}.png"
