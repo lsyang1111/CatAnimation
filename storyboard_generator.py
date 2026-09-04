@@ -80,19 +80,16 @@ Cinematic warm golden cafe lighting, 8K calico fur detail.""",
     },
     {
         "id": "shot3",
-        "title": "Shot 3（8–12s）：偷舔奶泡 ➔ 楚楚可憐遞給你",
-        "description": "矮矮嬌小的妮妮雙爪捧杯偷舔奶泡被抓包，露出最無辜楚楚可憐的表情，輕輕遞出咖啡",
+        "title": "Shot 3（8–12s）：親切職業笑容遞咖啡",
+        "description": "矮矮嬌小的妮妮雙爪捧著拉花咖啡，露出生動親切的甜美職業店員笑容，溫柔遞給顧客",
         "prompt": """Photorealistic 3D rendered storyboard frame. Close-up shot inside a cozy ambient cafe.
-SAME calico cat Nini (white fur with orange and black patches, green eyes, white chest, EXACT SAME adorable short cat body height and head size as Shot 1 and Shot 2).
-in brown leather apron.
+SAME calico cat Nini (white fur with orange and black patches, green eyes, white chest, EXACT SAME adorable short cat body height and head size as Shot 1 and Shot 2) in brown leather apron.
 BACKGROUND: moka_cat_12s style warm blurred cafe interior with golden bokeh lights and wooden shelves.
 On the dark wooden counter next to the cat: the EXACT SAME small Bialetti Moka Express octagonal aluminum Moka pot (small scale relative to cat, reaching lower chest height only; black handle strictly on RIGHT SIDE, mustache man logo on front).
-Cat holds ONE white ceramic mug with heart-shaped latte art with BOTH PAWS —
-caught licking milk foam with its small pink tongue.
-Expression: NOT guilty smirk — the most innocent, soft, doe-eyed look.
-Green eyes wide and glistening, slightly parted mouth, expression says 'I'm sorry... but it was so good'.
+Cat holds ONE white ceramic mug with perfect heart-shaped latte art with BOTH PAWS.
+Expression: A sweet, warm, polite, professional barista smile with twinkling green eyes, looking directly at the viewer/camera with customer-service warmth, pride, and friendliness. No tongue sticking out, no silly face — pure charming professional cafe worker smile.
 Cat softly extends the mug toward the camera/viewer with both paws.
-Soft warm golden cinematic lighting, 8K calico fur texture, adorably innocent expression.""",
+Soft warm golden cinematic lighting, 8K calico fur texture, delightful professional barista smile.""",
     },
 ]
 
