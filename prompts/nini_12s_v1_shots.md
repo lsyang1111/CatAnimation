@@ -14,7 +14,7 @@
 - Cat character: calico cat, white fur with orange and black patches, green eyes, white chest — NEVER changes appearance.
 - CAT PROPORTIONS: Small compact cat body height, short cute paws, realistic small cat proportions (not tall humanoid). Wooden counter top reaches up to cat's chest/shoulder level so cat looks cute, small and short.
 - ONE white ceramic mug. NEVER changes shape, size, or style throughout all shots.
-- Classic dark aluminum octagonal Moka pot (Bialetti-style). Black handle RIGHT SIDE ONLY. Shape never changes.
+- VINTAGE MOKA POT (EXACT SAME IN ALL SHOTS): Classic octagonal Bialetti-style aluminum Moka pot with an iconic mustache-man mascot logo prominently engraved on front chamber wall, vintage weathered matte finish with subtle patina/scratches. Black handle RIGHT SIDE ONLY. Shape, logo, and vintage wear pattern NEVER change.
 - POS card machine stays visible on LEFT side of counter at ALL times after being set down.
 - Cat does NOT start coffee-making until AFTER green payment light confirms.
 - All objects obey gravity. Nothing floats.
