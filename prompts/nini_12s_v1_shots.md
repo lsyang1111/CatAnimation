@@ -11,11 +11,12 @@
 
 ```
 === HARD CONSTRAINTS (NEVER VIOLATE) ===
-- Cat character: calico cat, white fur with orange and black patches, green eyes, white chest — NEVER changes appearance.
-- CAT PROPORTIONS: Small compact cat body height, short cute paws, realistic small cat proportions (not tall humanoid). Wooden counter top reaches up to cat's chest/shoulder level so cat looks cute, small and short.
-- ONE white ceramic mug. NEVER changes shape, size, or style throughout all shots.
-- VINTAGE MOKA POT (EXACT SAME IN ALL SHOTS): Classic octagonal Bialetti-style aluminum Moka pot with an iconic mustache-man mascot logo prominently engraved on front chamber wall, vintage weathered matte finish with subtle patina/scratches. Black handle RIGHT SIDE ONLY. Shape, logo, and vintage wear pattern NEVER change.
+- Cat character: calico cat Nini, white fur with orange and black patches, green eyes, white chest — NEVER changes appearance.
+- CAT PROPORTIONS & HEIGHT: Exactly match Reference Image 1. Small compact cat body height, short cute paws. Wooden counter reaches cat's chest/shoulder level in ALL shots so cat height remains 100% IDENTICAL across all frames.
+- BACKGROUND & ATMOSPHERE: Exactly match the warm, cinematic, golden-lit cafe atmosphere of 'moka_cat_12s' — rich dark wooden counter, warm amber Edison bulb hanging lights creating soft golden bokeh background.
+- VINTAGE MOKA POT & HANDLE (EXACT SAME IN ALL SHOTS): Classic octagonal Bialetti-style aluminum Moka pot with an iconic mustache-man mascot logo on front. The black plastic handle MUST be strictly attached on the RIGHT SIDE ONLY (facing right from viewer's perspective) in ALL shots — NEVER flipped or mirrored.
 - POS CARD MACHINE (EXACT SAME IN ALL SHOTS): Handheld payment reader terminal with light-grey front casing, glowing green screen at top, 3x4 button grid layout, red cancel button (bottom-left) and green enter button (bottom-right). Color, body shell, and button count MUST be 100% IDENTICAL between Shot 1 and Shot 2.
+- ONE white ceramic mug. NEVER changes shape, size, or style throughout all shots.
 - Cat does NOT start coffee-making until AFTER green payment light confirms.
 - All objects obey gravity. Nothing floats.
 === END CONSTRAINTS ===
