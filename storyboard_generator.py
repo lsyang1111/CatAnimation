@@ -24,7 +24,7 @@ from google.genai import types
 # ✏️  在這裡填入你的分鏡資料
 # ============================================================
 
-PROJECT_NAME = "黑貓丞丞咖啡廳系列"
+PROJECT_NAME = "三花貓妮妮咖啡廳系列"
 
 # 全局硬性規則（會自動加到每段 prompt 前面）
 GLOBAL_CONSTRAINTS = """
@@ -41,44 +41,48 @@ SHOTS = [
     {
         "id": "shot1",
         "title": "Shot 1（0–4s）：索卡付款",
-        "description": "丞丞右爪持 POS 機遞向鏡頭，顧客刷卡，綠燈確認後放下 POS 機開始製作咖啡",
-        "prompt": """Photorealistic 3D rendered storyboard frame. Sleek black cat with emerald green eyes
-and brown leather apron standing behind a wooden barista counter inside a cozy cafe.
-BACKGROUND: warm cafe interior with wooden shelves holding coffee bags and jars, 
-a professional espresso machine visible behind, hanging Edison bulb lights, 
-soft golden bokeh — the cat looks like a part-time cafe worker.
+        "description": "妮妮右爪持 POS 機遞向鏡頭，顧客刷卡，綠燈確認後放下 POS 機開始製作咖啡",
+        "prompt": """Photorealistic 3D rendered storyboard frame. A gentle calico cat named Nini
+(white fur with orange and black patches, green eyes, white chest)
+wearing a brown leather apron, standing behind a wooden barista counter inside a cozy cafe.
+BACKGROUND: warm cafe interior with wooden shelves holding coffee bags and jars,
+a professional espresso machine visible behind, hanging Edison bulb lights,
+soft golden bokeh — the cat looks like a sweet part-time cafe worker.
 Counter has ONLY TWO items: ONE empty white ceramic mug in center,
 ONE classic dark aluminum octagonal Moka pot (Bialetti-style, matte dark body, black handle on the RIGHT side).
 There is NO POS machine on the counter table.
 The cat holds ONE POS card reader up with its right paw toward the camera — the ONLY POS machine in scene.
 Green confirmation light glows on the POS screen in the cat's paw.
-Cinematic warm cafe lighting, 8K black fur texture.""",
+Cinematic warm cafe lighting, 8K fur texture.""",
     },
     {
         "id": "shot2",
         "title": "Shot 2（4–8s）：倒咖啡 + 奶泡拉花",
-        "description": "丞丞傾斜摩卡壺（造型不變）倒入同一個白瓷杯，接著用奶泡壺拉出愛心",
+        "description": "妮妮傾斜摩卡壺（造型不變）倒入同一個白瓷杯，接著用奶泡壺拉出愛心",
         "prompt": """Photorealistic 3D rendered storyboard frame. Continuation from Shot 1.
-Sleek black cat with emerald green eyes and brown leather apron behind a wooden barista counter.
+SAME calico cat Nini (white fur with orange and black patches, green eyes, white chest)
+in brown leather apron behind a wooden barista counter inside a cozy cafe.
 BACKGROUND: same warm cafe interior — wooden shelves with coffee bags, espresso machine, Edison bulb lights, golden bokeh.
 Counter: POS card machine placed on far LEFT corner (still visible), ONE white ceramic mug stationary in center
 receiving dark espresso being poured.
 Cat grips the classic dark aluminum Bialetti-style octagonal Moka pot by its RIGHT-SIDE black handle,
 tilting it to pour (shape unchanged, angle only). Warm steam rising from the mug.
-Cinematic warm cafe lighting, 8K detail.""",
+Cinematic warm cafe lighting, 8K calico fur detail.""",
     },
     {
         "id": "shot3",
-        "title": "Shot 3（8–12s）：偷舔奶泡 ➔ 害羞遞給你",
-        "description": "丞丞雙爪捧起有愛心拉花的白瓷杯，偷舔奶泡被抓包，翡翠眼瞇成月牙害羞遞出",
+        "title": "Shot 3（8–12s）：偷舔奶泡 ➔ 楚楚可憐遞給你",
+        "description": "妮妮雙爪捧杯偷舔奶泡被抓包，露出最無辜楚楚可憐的表情，輕輕遞出咖啡",
         "prompt": """Photorealistic 3D rendered storyboard frame. Close-up shot inside a cozy cafe.
-Sleek black cat with emerald green eyes and brown leather apron.
-BACKGROUND: warm blurred cafe interior with golden bokeh lights and wooden shelves — part-time barista vibe.
+SAME calico cat Nini (white fur with orange and black patches, green eyes, white chest)
+in brown leather apron.
+BACKGROUND: warm blurred cafe interior with golden bokeh lights and wooden shelves.
 Cat holds ONE white ceramic mug with heart-shaped latte art with BOTH PAWS —
-caught in the act of licking milk foam with its small pink tongue.
-The cat's emerald eyes squint into happy crescent moon shapes, bashful and charming guilty expression.
-Cat gently extends the mug toward the camera/viewer.
-Soft warm cinematic lighting, 8K black fur texture, adorable guilty expression.""",
+caught licking milk foam with its small pink tongue.
+Expression: NOT guilty smirk — the most innocent, soft, doe-eyed look.
+Green eyes wide and glistening, slightly parted mouth, expression says 'I'm sorry... but it was so good'.
+Cat softly extends the mug toward the camera/viewer with both paws.
+Soft warm cinematic lighting, 8K calico fur texture, adorably innocent expression.""",
     },
 ]
 
