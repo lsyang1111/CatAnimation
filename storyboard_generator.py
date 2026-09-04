@@ -68,7 +68,7 @@ Cinematic warm golden cafe lighting, 8K fur texture.""",
     {
         "id": "shot2",
         "title": "Shot 2（4–8s）：倒咖啡 + 奶泡拉花",
-        "description": "妮妮穿棕圍裙，左側吧台靜置同一台 POS 機，右爪抓握摩卡壺右側把手傾斜倒入中央白瓷杯",
+        "description": "妮妮穿棕圍裙，左側吧台靜置同一台 POS 機，用左爪（畫面右側那隻手）抓握摩卡壺右側把手，傾斜倒咖啡入中央白瓷杯，Logo清晰可見",
         "prompt": """Photorealistic 3D rendered storyboard frame. Continuation from Shot 1.
 SAME calico cat Nini (white fur with orange and black patches, green eyes, white chest, EXACT SAME short compact body height and short torso as Shot 1)
 WEARING THE EXACT SAME BROWN LEATHER APRON WITH NECK STRAP AND FRONT POCKET.
@@ -76,7 +76,8 @@ BACKGROUND LAYOUT (EXACT SAME AS SHOT 1): Professional stainless steel espresso 
 COUNTERTOP LAYOUT (EXACT SAME AS SHOT 1):
 - Far LEFT counter: The EXACT SAME light grey POS card reader with glowing green screen rests ALONE on the far-left counter corner (no cat paws touching it).
 - CENTER counter: ONE white ceramic mug stationary in center receiving dark espresso.
-- Far RIGHT: Cat grips the EXACT SAME Bialetti Moka Express Moka pot by its RIGHT-SIDE black curved plastic handle with its right paw, tilting it from the right to pour into the center mug (handle strictly on RIGHT).
+- Far RIGHT: Cat uses its LEFT PAW (the paw on viewer's RIGHT side) to hold the Bialetti Moka pot by its RIGHT-SIDE black plastic handle, tilting the spout towards the center mug.
+- MOKA POT DETAILS: The iconic Bialetti mustache-man mascot logo ('L'omino con i baffi') and BIALETTI text MUST be clearly printed and visible on the front octagonal chamber wall of the Moka pot. Black handle remains strictly on the RIGHT side.
 Cinematic warm golden cafe lighting, 8K calico fur detail.""",
     },
     {
