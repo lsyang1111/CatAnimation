@@ -26,16 +26,17 @@ from google.genai import types
 
 PROJECT_NAME = "三花貓妮妮咖啡廳系列"
 
-# 參考照片路徑（設定後 AI 會以這張照片作為角色外觀基準）
-# 設為 None 則不使用參考照片
-REFERENCE_IMAGE_PATH = r"C:\Users\lsyan\.gemini\antigravity\brain\025f4dfe-4e20-42c2-b62d-325ae710468f\media__1788487658361.jpg"
+# 參考照片路徑（設定後 AI 會以這些照片作為角色與道具外觀基準）
+NINI_REF_PATH = r"C:\Users\lsyan\Documents\Code\CatAnimation\nini_reference.jpg"
+MOKA_REF_PATH = r"C:\Users\lsyan\Documents\Code\CatAnimation\moka_reference.png"
 
 # 全局硬性規則（會自動加到每段 prompt 前面）
 GLOBAL_CONSTRAINTS = """
 === HARD CONSTRAINTS (NEVER VIOLATE) ===
 - CAT PROPORTIONS: Small compact cat body height, short cute paws, realistic small cat proportions (not tall humanoid). Wooden counter top reaches up to cat's chest/shoulder level so cat looks cute, small and short.
+- CAT APPEARANCE: Exactly match Reference Image 1 (Nini the calico cat).
+- MOKA POT APPEARANCE: Exactly match Reference Image 2 (Bialetti Moka Express pot). MUST copy the EXACT line-art logo of the little man with mustache raising one finger ('L'omino con i baffi') and the 'BIALETTI' text from Reference Image 2 onto the Moka pot's upper chamber.
 - ONE white ceramic mug. NEVER changes shape, size, or style.
-- BIALETTI MOKA POT (EXACT SAME IN ALL SHOTS): Classic octagonal Bialetti Moka Express aluminum Moka pot with glossy silver/grey metallic finish and subtle vintage aged patina. Prominently features the iconic black line-art logo of 'the little man with a mustache raising one finger' (l'omino coi baffi) printed on the upper octagonal chamber face, with 'BIALETTI' text underneath it, and a silver ring band below it reading 'Moka Express'. Black curved plastic handle on RIGHT SIDE ONLY. Shape, logo, and vintage metal finish NEVER change across shots.
 - Cat does NOT start coffee-making until AFTER green payment light confirms.
 - All objects obey gravity. Nothing floats.
 === END CONSTRAINTS ===
@@ -110,19 +111,29 @@ def generate_storyboard_image(shot: dict, client) -> str:
 
     print(f"  Generating {shot['id']}: {shot['title']} ...")
 
-    # Build contents: include reference image if provided
-    if REFERENCE_IMAGE_PATH and os.path.exists(REFERENCE_IMAGE_PATH):
-        with open(REFERENCE_IMAGE_PATH, "rb") as f:
-            image_bytes = f.read()
-        ext = os.path.splitext(REFERENCE_IMAGE_PATH)[1].lower()
+    # Build contents: include both reference images if provided
+    contents_parts = []
+    
+    if NINI_REF_PATH and os.path.exists(NINI_REF_PATH):
+        with open(NINI_REF_PATH, "rb") as f:
+            nini_bytes = f.read()
+        ext = os.path.splitext(NINI_REF_PATH)[1].lower()
         mime = "image/jpeg" if ext in (".jpg", ".jpeg") else "image/png"
-        contents = [
-            types.Part(text="This is the reference cat. Preserve its exact appearance in the generated image:\n" + full_prompt),
-            types.Part(inline_data=types.Blob(mime_type=mime, data=image_bytes)),
-        ]
-        print(f"  [REF] Using reference photo: {os.path.basename(REFERENCE_IMAGE_PATH)}")
-    else:
-        contents = full_prompt
+        contents_parts.append(types.Part(text="REFERENCE IMAGE 1: Cat Protagonist Nini (preserve exact fur, facial markings, and eyes):"))
+        contents_parts.append(types.Part(inline_data=types.Blob(mime_type=mime, data=nini_bytes)))
+        print(f"  [REF] Using Nini photo: {os.path.basename(NINI_REF_PATH)}")
+
+    if MOKA_REF_PATH and os.path.exists(MOKA_REF_PATH):
+        with open(MOKA_REF_PATH, "rb") as f:
+            moka_bytes = f.read()
+        ext = os.path.splitext(MOKA_REF_PATH)[1].lower()
+        mime = "image/jpeg" if ext in (".jpg", ".jpeg") else "image/png"
+        contents_parts.append(types.Part(text="REFERENCE IMAGE 2: Bialetti Moka Express Pot (MUST copy this EXACT mustache-man line art logo and BIALETTI text onto the upper chamber face of the Moka pot):"))
+        contents_parts.append(types.Part(inline_data=types.Blob(mime_type=mime, data=moka_bytes)))
+        print(f"  [REF] Using Moka pot photo: {os.path.basename(MOKA_REF_PATH)}")
+
+    contents_parts.append(types.Part(text="SCENE PROMPT:\n" + full_prompt))
+    contents = contents_parts
 
     response = client.models.generate_content(
         model="gemini-2.5-flash-image",
