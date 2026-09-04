@@ -28,37 +28,38 @@ out_dir = r"c:\Users\lsyan\Documents\Code\CatAnimation"
 SHOT_CONFIGS = [
     {
         "output_name": "shot1.mp4",
-        "image_path": os.path.join(out_dir, "storyboards", "shot1_20260904_110333.png"),
+        "image_path": os.path.join(out_dir, "storyboards", "shot1_20260904_203901.png"),
         "prompt": """Photorealistic 3D animation, 4 seconds.
-A gentle calico cat Nini (white fur with orange and black patches, green eyes, white chest, short cute small cat proportions) wearing a brown leather apron stands behind a wooden barista counter inside a cozy warm cafe.
-Counter height reaches cat's chest level.
-Counter has ONLY TWO items: ONE empty white ceramic mug in center, ONE classic Bialetti Moka Express octagonal aluminum Moka pot with iconic mustache man raising finger logo on front.
-The cat holds ONE light grey POS card reader with glowing green screen up with its right paw toward camera.
+A gentle calico cat Nini (white fur with orange and black patches, green eyes, white chest, short cute small cat proportions) wearing a brown leather apron stands behind a dark wooden barista counter inside a cozy warm cafe.
+BACKGROUND: espresso machine on viewer's left background, dark wooden shelves on viewer's right background, hanging Edison bulb lights with soft golden bokeh.
+Counter: Center has ONE empty white ceramic mug. Right counter has ONE small classic Bialetti Moka Express octagonal aluminum Moka pot (mustache man logo on front, black handle strictly on RIGHT side).
+The cat holds ONE light grey POS card reader with glowing green screen up with its right paw on viewer's LEFT toward camera.
 A credit card taps the device. Green confirmation light flashes.
 ONLY AFTER green light: cat nods gently and places POS machine on far left of counter.
-Cinematic warm cafe lighting, 8K fur texture.""",
+Cinematic warm golden cafe lighting, 8K fur texture.""",
     },
     {
         "output_name": "shot2.mp4",
-        "image_path": os.path.join(out_dir, "storyboards", "shot2_20260904_110351.png"),
+        "image_path": os.path.join(out_dir, "storyboards", "shot2_20260904_205549.png"),
         "prompt": """Photorealistic 3D animation, 4 seconds. Continuation from Shot 1.
-SAME calico cat Nini (white/orange/black patches, green eyes, short cute small cat proportions) in brown leather apron behind wooden barista counter.
-Counter: POS machine on far LEFT (visible), ONE white ceramic mug STATIONARY in center.
-Cat grips the EXACT SAME Bialetti Moka Express octagonal aluminum Moka pot (with iconic mustache man raising finger logo on front) by its RIGHT-SIDE black handle, tilts it and pours dark espresso into the STATIONARY white ceramic mug.
-Cat sets Moka pot down, picks up milk pitcher, pours steamed milk into SAME mug creating heart latte art.
-Cinematic warm cafe lighting, 8K fur texture.""",
+SAME calico cat Nini (white/orange/black patches, green eyes, short cute small cat proportions) WEARING THE EXACT SAME BROWN LEATHER APRON behind dark wooden counter.
+BACKGROUND: same warm cafe interior — espresso machine on viewer's left, dark wooden shelves on viewer's right, golden bokeh.
+Counter: Light grey POS machine rests ALONE on far-left corner (no paws touching). ONE white ceramic mug STATIONARY in center.
+Cat uses its LEFT PAW (on viewer's right) to hold the Bialetti Moka pot by its RIGHT-SIDE black plastic handle, tilting the spout from the right to pour dark espresso into the center mug.
+Moka pot has iconic Bialetti mustache man logo printed on front.
+Cinematic warm golden cafe lighting, 8K fur detail.""",
     },
     {
         "output_name": "shot3.mp4",
-        "image_path": os.path.join(out_dir, "storyboards", "shot3_20260904_110409.png"),
+        "image_path": os.path.join(out_dir, "storyboards", "shot3_20260904_203151.png"),
         "prompt": """Photorealistic 3D animation, 4 seconds. Continuation from Shot 2.
-Close-up shot of SAME calico cat Nini (white/orange/black fur patches, green eyes, white chest, adorable small cat proportions) in brown leather apron.
-The cat lifts the SAME white ceramic mug (heart latte art on top) with BOTH PAWS to offer it to the viewer.
-Just before handing it over, the cat can't resist — it gently licks a tiny sip of milk foam with its small pink tongue.
-The cat slowly looks up, caught on camera.
-Expression: NOT guilty smirk, but the most innocent, soft, doe-eyed look — saying "I'm sorry... but it was so good 🥺".
-The cat softly extends the mug toward the viewer with both paws.
-Soft warm cinematic lighting, 8K calico fur texture.""",
+Close-up shot of SAME calico cat Nini (white/orange/black fur patches, green eyes, white chest, adorable small cat proportions) WEARING THE EXACT SAME BROWN LEATHER APRON.
+BACKGROUND: same warm blurred cafe interior with golden bokeh lights.
+On dark wooden counter on viewer's right: Bialetti Moka pot with black handle on right and mascot logo on front.
+The cat lifts the SAME white ceramic mug (perfect heart latte art on top) with BOTH PAWS to offer it to the viewer.
+Expression: A sweet, warm, polite, professional barista smile with twinkling green eyes, looking directly at the viewer with customer-service warmth. No tongue sticking out.
+Cat softly extends the mug toward the viewer with both paws.
+Soft warm golden cinematic lighting, 8K calico fur texture.""",
     },
 ]
 
