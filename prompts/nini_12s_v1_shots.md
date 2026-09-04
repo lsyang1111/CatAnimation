@@ -15,7 +15,7 @@
 - CAT PROPORTIONS: Small compact cat body height, short cute paws, realistic small cat proportions (not tall humanoid). Wooden counter top reaches up to cat's chest/shoulder level so cat looks cute, small and short.
 - ONE white ceramic mug. NEVER changes shape, size, or style throughout all shots.
 - VINTAGE MOKA POT (EXACT SAME IN ALL SHOTS): Classic octagonal Bialetti-style aluminum Moka pot with an iconic mustache-man mascot logo prominently engraved on front chamber wall, vintage weathered matte finish with subtle patina/scratches. Black handle RIGHT SIDE ONLY. Shape, logo, and vintage wear pattern NEVER change.
-- POS card machine stays visible on LEFT side of counter at ALL times after being set down.
+- POS CARD MACHINE (EXACT SAME IN ALL SHOTS): Handheld payment reader terminal with light-grey front casing, glowing green screen at top, 3x4 button grid layout, red cancel button (bottom-left) and green enter button (bottom-right). Color, body shell, and button count MUST be 100% IDENTICAL between Shot 1 and Shot 2.
 - Cat does NOT start coffee-making until AFTER green payment light confirms.
 - All objects obey gravity. Nothing floats.
 === END CONSTRAINTS ===

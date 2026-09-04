@@ -29,6 +29,7 @@ PROJECT_NAME = "三花貓妮妮咖啡廳系列"
 # 參考照片路徑（設定後 AI 會以這些照片作為角色與道具外觀基準）
 NINI_REF_PATH = r"C:\Users\lsyan\Documents\Code\CatAnimation\nini_reference.jpg"
 MOKA_REF_PATH = r"C:\Users\lsyan\Documents\Code\CatAnimation\moka_reference.png"
+POS_REF_PATH = r"C:\Users\lsyan\Documents\Code\CatAnimation\pos_reference.png"
 
 # 全局硬性規則（會自動加到每段 prompt 前面）
 GLOBAL_CONSTRAINTS = """
@@ -36,6 +37,7 @@ GLOBAL_CONSTRAINTS = """
 - CAT PROPORTIONS: Small compact cat body height, short cute paws, realistic small cat proportions (not tall humanoid). Wooden counter top reaches up to cat's chest/shoulder level so cat looks cute, small and short.
 - CAT APPEARANCE: Exactly match Reference Image 1 (Nini the calico cat).
 - MOKA POT APPEARANCE: Exactly match Reference Image 2 (Bialetti Moka Express pot). MUST copy the EXACT line-art logo of the little man with mustache raising one finger ('L'omino con i baffi') and the 'BIALETTI' text from Reference Image 2 onto the Moka pot's upper chamber.
+- POS MACHINE APPEARANCE: Exactly match Reference Image 3 (Payment terminal). Light grey front casing, glowing green screen at top, 3x4 numeric button layout with red bottom-left button and green bottom-right button. EXACT SAME color, button layout, and shape in both Shot 1 and Shot 2.
 - ONE white ceramic mug. NEVER changes shape, size, or style.
 - Cat does NOT start coffee-making until AFTER green payment light confirms.
 - All objects obey gravity. Nothing floats.
@@ -131,6 +133,15 @@ def generate_storyboard_image(shot: dict, client) -> str:
         contents_parts.append(types.Part(text="REFERENCE IMAGE 2: Bialetti Moka Express Pot (MUST copy this EXACT mustache-man line art logo and BIALETTI text onto the upper chamber face of the Moka pot):"))
         contents_parts.append(types.Part(inline_data=types.Blob(mime_type=mime, data=moka_bytes)))
         print(f"  [REF] Using Moka pot photo: {os.path.basename(MOKA_REF_PATH)}")
+
+    if POS_REF_PATH and os.path.exists(POS_REF_PATH):
+        with open(POS_REF_PATH, "rb") as f:
+            pos_bytes = f.read()
+        ext = os.path.splitext(POS_REF_PATH)[1].lower()
+        mime = "image/jpeg" if ext in (".jpg", ".jpeg") else "image/png"
+        contents_parts.append(types.Part(text="REFERENCE IMAGE 3: POS Payment Terminal (MUST replicate this EXACT light-grey body, glowing green screen, 3x4 button layout with red/green bottom buttons):"))
+        contents_parts.append(types.Part(inline_data=types.Blob(mime_type=mime, data=pos_bytes)))
+        print(f"  [REF] Using POS photo: {os.path.basename(POS_REF_PATH)}")
 
     contents_parts.append(types.Part(text="SCENE PROMPT:\n" + full_prompt))
     contents = contents_parts
