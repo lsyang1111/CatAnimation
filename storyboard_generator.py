@@ -67,14 +67,15 @@ Cinematic warm golden cafe lighting, 8K fur texture.""",
     {
         "id": "shot2",
         "title": "Shot 2（4–8s）：倒咖啡 + 奶泡拉花",
-        "description": "矮矮嬌小的妮妮右爪抓握摩卡壺右側把手傾斜倒入白瓷杯，接著用奶泡壺拉出愛心",
+        "description": "矮矮嬌小的妮妮穿著棕色皮革圍裙，右爪抓握摩卡壺右側黑色塑料把手傾斜倒入白瓷杯",
         "prompt": """Photorealistic 3D rendered storyboard frame. Continuation from Shot 1.
-SAME calico cat Nini (white fur with orange and black patches, green eyes, white chest, EXACT SAME short compact body height and short torso as Shot 1).
-The wooden barista counter reaches high up to the cat's upper chest/shoulder level (EXACT SAME camera height and counter framing as Shot 1; cat is NOT standing up tall and does NOT have an elongated body).
+SAME calico cat Nini (white fur with orange and black patches, green eyes, white chest, EXACT SAME short compact body height and short torso as Shot 1)
+WEARING THE EXACT SAME BROWN LEATHER APRON WITH NECK STRAP AND FRONT POCKET (apron MUST be clearly visible and worn).
+The wooden barista counter reaches high up to the cat's upper chest level (EXACT SAME camera height and counter framing as Shot 1; cat is NOT standing up tall).
 BACKGROUND: same moka_cat_12s style warm cafe interior — dark wooden shelves, espresso machine, hanging Edison lights, rich golden bokeh.
-Counter: POS card machine rests ALONE on far LEFT corner (no cat paws touching the POS machine), ONE white ceramic mug stationary in center receiving dark espresso being poured.
-Cat grips the EXACT SAME small Bialetti Moka Express octagonal aluminum Moka pot by its RIGHT-SIDE black plastic handle with its right paw (Moka pot reaches lower chest level only),
-tilting it from the right side to pour into the center mug (handle strictly on RIGHT, shape and logo unchanged). Warm steam rising from mug.
+Counter: POS card machine rests ALONE on far LEFT corner (no cat paws touching POS machine), ONE white ceramic mug stationary in center receiving dark espresso being poured.
+Cat grips the EXACT SAME small Bialetti Moka Express octagonal aluminum Moka pot by its RIGHT-SIDE BLACK CURVED PLASTIC HANDLE with its right paw (exact same handle shape, size, color, and attachment as Shot 1 and Reference Image 2),
+tilting it from the right side to pour into the center mug (black handle strictly attached to right side of Moka pot, shape and logo unchanged). Warm steam rising from mug.
 Cinematic warm golden cafe lighting, 8K calico fur detail.""",
     },
     {
