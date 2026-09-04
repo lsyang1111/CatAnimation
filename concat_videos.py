@@ -1,12 +1,21 @@
-import os
+import os, sys
 from moviepy import VideoFileClip, concatenate_videoclips
 
 out_dir = r"c:\Users\lsyan\Documents\Code\CatAnimation"
 
-clip1_path = os.path.join(out_dir, "clip1.mp4")
-clip2_path = os.path.join(out_dir, "clip2.mp4")
-clip3_path = os.path.join(out_dir, "clip3.mp4")
-output_path = os.path.join(out_dir, "final_cat_animation.mp4")
+# v7: Use shot1/shot2/shot3 if they exist, otherwise fall back to clip1/clip2/clip3
+if os.path.exists(os.path.join(out_dir, "shot1.mp4")):
+    clip1_path = os.path.join(out_dir, "shot1.mp4")
+    clip2_path = os.path.join(out_dir, "shot2.mp4")
+    clip3_path = os.path.join(out_dir, "shot3.mp4")
+    output_path = os.path.join(out_dir, "chengcheng_final_12s.mp4")
+    print("[v7 mode] Using shot1/shot2/shot3 -> chengcheng_final_12s.mp4")
+else:
+    clip1_path = os.path.join(out_dir, "clip1.mp4")
+    clip2_path = os.path.join(out_dir, "clip2.mp4")
+    clip3_path = os.path.join(out_dir, "clip3.mp4")
+    output_path = os.path.join(out_dir, "final_cat_animation.mp4")
+    print("[v1 mode] Using clip1/clip2/clip3 -> final_cat_animation.mp4")
 
 clips_to_concat = []
 paths = [clip1_path, clip2_path, clip3_path]
