@@ -69,8 +69,8 @@ Cinematic warm golden cafe lighting, 8K fur texture.""",
         "title": "Shot 2（4–8s）：倒咖啡 + 奶泡拉花",
         "description": "矮矮嬌小的妮妮右爪抓握摩卡壺右側把手傾斜倒入白瓷杯，接著用奶泡壺拉出愛心",
         "prompt": """Photorealistic 3D rendered storyboard frame. Continuation from Shot 1.
-SAME calico cat Nini (white fur with orange and black patches, green eyes, white chest, EXACT SAME short cute cat height and small body proportions)
-in brown leather apron behind the dark wooden barista counter (counter height reaches cat's chest level).
+SAME calico cat Nini (white fur with orange and black patches, green eyes, white chest, EXACT SAME short compact body height and short torso as Shot 1).
+The wooden barista counter reaches high up to the cat's upper chest/shoulder level (EXACT SAME camera height and counter framing as Shot 1; cat is NOT standing up tall and does NOT have an elongated body).
 BACKGROUND: same moka_cat_12s style warm cafe interior — dark wooden shelves, espresso machine, hanging Edison lights, rich golden bokeh.
 Counter: POS card machine rests ALONE on far LEFT corner (no cat paws touching the POS machine), ONE white ceramic mug stationary in center receiving dark espresso being poured.
 Cat grips the EXACT SAME small Bialetti Moka Express octagonal aluminum Moka pot by its RIGHT-SIDE black plastic handle with its right paw (Moka pot reaches lower chest level only),
