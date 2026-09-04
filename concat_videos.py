@@ -8,8 +8,8 @@ if os.path.exists(os.path.join(out_dir, "shot1.mp4")):
     clip1_path = os.path.join(out_dir, "shot1.mp4")
     clip2_path = os.path.join(out_dir, "shot2.mp4")
     clip3_path = os.path.join(out_dir, "shot3.mp4")
-    output_path = os.path.join(out_dir, "chengcheng_final_12s.mp4")
-    print("[v7 mode] Using shot1/shot2/shot3 -> chengcheng_final_12s.mp4")
+    output_path = os.path.join(out_dir, "nini_final_12s.mp4")
+    print("[Nini mode] Using shot1/shot2/shot3 -> nini_final_12s.mp4")
 else:
     clip1_path = os.path.join(out_dir, "clip1.mp4")
     clip2_path = os.path.join(out_dir, "clip2.mp4")
