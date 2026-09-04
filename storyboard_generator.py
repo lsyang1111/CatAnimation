@@ -34,10 +34,11 @@ POS_REF_PATH = r"C:\Users\lsyan\Documents\Code\CatAnimation\pos_reference.png"
 # 全局硬性規則（會自動加到每段 prompt 前面）
 GLOBAL_CONSTRAINTS = """
 === HARD CONSTRAINTS (NEVER VIOLATE) ===
-- CAT PROPORTIONS & HEIGHT: Exactly match Reference Image 1 (Nini the calico cat). Small compact cat body height, short cute paws, realistic small cat proportions (not tall humanoid). Wooden barista counter top reaches up to cat's chest/shoulder level in ALL shots so cat height remains 100% IDENTICAL across all frames.
-- BACKGROUND & ATMOSPHERE: Exactly match the warm, cinematic, golden-lit cafe atmosphere of 'moka_cat_12s' — rich dark wooden counter, warm amber Edison bulb hanging lights creating soft golden bokeh background, warm cinematic ray-traced lighting, cozy premium cafe ambiance.
+- CAT-TO-MOKA-POT SCALE RATIO (MUST BE 100% IDENTICAL IN ALL SHOTS): The cat Nini is significantly taller and larger than the Moka pot in ALL THREE SHOTS. The Bialetti Moka pot is a small tabletop utensil (reaching only up to the cat's lower chest/elbow level). The cat's head is 2.5 times higher than the top of the Moka pot in ALL shots. In Shot 3 close-up, the Moka pot MUST remain small in scale relative to the cat (never oversized or giant).
+- CAT PROPORTIONS & HEIGHT: Exactly match Reference Image 1 (Nini the calico cat). Small compact cat body height, short cute paws. Wooden barista counter top reaches up to cat's chest/shoulder level in ALL shots so cat height remains 100% IDENTICAL across all frames.
+- BACKGROUND & ATMOSPHERE: Exactly match the warm, cinematic, golden-lit cafe atmosphere of 'moka_cat_12s' — rich dark wooden counter, warm amber Edison bulb hanging lights creating soft golden bokeh background, warm cinematic ray-traced lighting.
 - MOKA POT APPEARANCE & HANDLE: Exactly match Reference Image 2 (Bialetti Moka Express pot). MUST copy the EXACT line-art logo of the little man with mustache raising one finger ('L'omino con i baffi') and 'BIALETTI' text onto the upper octagonal chamber. The black plastic handle MUST be strictly attached on the RIGHT SIDE ONLY (facing right from viewer's perspective) in ALL shots — NEVER flipped or mirrored.
-- POS MACHINE APPEARANCE: Exactly match Reference Image 3 (Payment terminal). Light grey front casing, glowing green screen at top, 3x4 numeric button layout with red bottom-left button and green bottom-right button. EXACT SAME color, button layout, and shape in both Shot 1 and Shot 2.
+- POS MACHINE APPEARANCE & POSSESSION: Exactly match Reference Image 3 (Payment terminal). Light grey front casing, glowing green screen at top, 3x4 numeric button layout. In Shot 1, cat holds POS machine with right paw. In Shot 2, POS machine rests ALONE on the far-left counter with NO CAT PAWS touching it.
 - ONE white ceramic mug. NEVER changes shape, size, or style.
 - Cat does NOT start coffee-making until AFTER green payment light confirms.
 - All objects obey gravity. Nothing floats.
@@ -57,7 +58,7 @@ wearing a brown leather apron, standing behind a dark warm wooden barista counte
 BACKGROUND: moka_cat_12s style warm cafe interior with dark wooden shelves holding coffee bags and glass jars,
 a professional stainless steel espresso machine behind, hanging warm amber Edison bulb lights with soft golden bokeh.
 Counter has ONLY TWO items: ONE empty white ceramic mug in center,
-ONE classic Bialetti Moka Express octagonal aluminum Moka pot (silver-grey metallic finish with iconic mustache man logo on front chamber wall, black plastic handle strictly on the RIGHT SIDE).
+ONE small classic Bialetti Moka Express octagonal aluminum Moka pot (silver-grey metallic finish with iconic mustache man logo on front chamber wall, black plastic handle strictly on the RIGHT SIDE; the Moka pot is small, reaching only up to cat's lower chest level).
 There is NO POS machine on the counter table.
 The cat holds ONE POS card reader up with its right paw toward the camera — the ONLY POS machine in scene.
 Green confirmation light glows on the POS screen in the cat's paw.
@@ -71,9 +72,8 @@ Cinematic warm golden cafe lighting, 8K fur texture.""",
 SAME calico cat Nini (white fur with orange and black patches, green eyes, white chest, EXACT SAME short cute cat height and small body proportions)
 in brown leather apron behind the dark wooden barista counter (counter height reaches cat's chest level).
 BACKGROUND: same moka_cat_12s style warm cafe interior — dark wooden shelves, espresso machine, hanging Edison lights, rich golden bokeh.
-Counter: POS card machine placed on far LEFT corner (still visible), ONE white ceramic mug stationary in center
-receiving dark espresso being poured.
-Cat grips the EXACT SAME Bialetti Moka Express octagonal aluminum Moka pot by its RIGHT-SIDE black plastic handle with its right paw,
+Counter: POS card machine rests ALONE on far LEFT corner (no cat paws touching the POS machine), ONE white ceramic mug stationary in center receiving dark espresso being poured.
+Cat grips the EXACT SAME small Bialetti Moka Express octagonal aluminum Moka pot by its RIGHT-SIDE black plastic handle with its right paw (Moka pot reaches lower chest level only),
 tilting it from the right side to pour into the center mug (handle strictly on RIGHT, shape and logo unchanged). Warm steam rising from mug.
 Cinematic warm golden cafe lighting, 8K calico fur detail.""",
     },
@@ -82,10 +82,10 @@ Cinematic warm golden cafe lighting, 8K calico fur detail.""",
         "title": "Shot 3（8–12s）：偷舔奶泡 ➔ 楚楚可憐遞給你",
         "description": "矮矮嬌小的妮妮雙爪捧杯偷舔奶泡被抓包，露出最無辜楚楚可憐的表情，輕輕遞出咖啡",
         "prompt": """Photorealistic 3D rendered storyboard frame. Close-up shot inside a cozy ambient cafe.
-SAME calico cat Nini (white fur with orange and black patches, green eyes, white chest, EXACT SAME adorable short cat body height)
+SAME calico cat Nini (white fur with orange and black patches, green eyes, white chest, EXACT SAME adorable short cat body height and head size as Shot 1 and Shot 2).
 in brown leather apron.
 BACKGROUND: moka_cat_12s style warm blurred cafe interior with golden bokeh lights and wooden shelves.
-On the dark wooden counter next to the cat: the EXACT SAME Bialetti Moka Express octagonal aluminum Moka pot (black handle strictly on RIGHT SIDE, mustache man logo on front).
+On the dark wooden counter next to the cat: the EXACT SAME small Bialetti Moka Express octagonal aluminum Moka pot (small scale relative to cat, reaching lower chest height only; black handle strictly on RIGHT SIDE, mustache man logo on front).
 Cat holds ONE white ceramic mug with heart-shaped latte art with BOTH PAWS —
 caught licking milk foam with its small pink tongue.
 Expression: NOT guilty smirk — the most innocent, soft, doe-eyed look.
