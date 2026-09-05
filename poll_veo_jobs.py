@@ -10,7 +10,7 @@ if not API_KEY:
     print("ERROR: GEMINI_API_KEY not set", flush=True)
     sys.exit(1)
 
-out_dir = r"c:\Users\lsyan\Documents\Code\CatAnimation"
+out_dir = os.path.dirname(os.path.abspath(__file__))
 ops_file = os.path.join(out_dir, "veo_ops.txt")
 
 if not os.path.exists(ops_file):

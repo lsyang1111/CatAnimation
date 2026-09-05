@@ -14,7 +14,7 @@ from google import genai
 from google.genai import types
 
 client = genai.Client(api_key=API_KEY)
-out_dir = r"c:\Users\lsyan\Documents\Code\CatAnimation"
+out_dir = os.path.dirname(os.path.abspath(__file__))
 
 SHOT_CONFIGS = [
     {
