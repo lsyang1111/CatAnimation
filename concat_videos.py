@@ -1,7 +1,7 @@
 import os
 from moviepy import VideoFileClip, concatenate_videoclips
 
-out_dir = r"c:\Users\lsyan\Documents\Code\CatAnimation"
+out_dir = os.path.dirname(os.path.abspath(__file__))
 
 # 4-shot 16s Nini animation
 shot_paths = [
