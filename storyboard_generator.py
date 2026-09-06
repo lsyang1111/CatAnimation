@@ -35,7 +35,7 @@ POS_REF_PATH = os.path.join(_SCRIPT_DIR, "pos_reference.png")
 # 全局硬性規則（會自動加到每段 prompt 前面）
 GLOBAL_CONSTRAINTS = """
 === HARD CONSTRAINTS (NEVER VIOLATE) ===
-- NINI'S ROLE (CRITICAL CONTEXT): Nini is a PART-TIME CAFE EMPLOYEE (咖啡廳打工仔) — a working barista/staff member, NOT a customer. She stands on the STAFF side of the counter, wears a work apron and a round employee ID tag on a cord around her neck. Every shot must read as "an employee at work," never as a patron. IMPORTANT: at any given moment she only handles ONE task/prop at a time (per that shot's own instructions below) — never show her holding more than what that specific shot describes.
+- NINI'S ROLE (CRITICAL CONTEXT): Nini is a PART-TIME CAFE EMPLOYEE (咖啡廳打工仔) — a working barista/staff member, NOT a customer. She stands on the STAFF side of the counter, wears a work apron and a round employee ID tag on a cord around her neck. Every shot must read as "an employee at work," never as a patron. IMPORTANT: she only ever holds exactly what that shot's own instructions describe — never invent an extra held or resting object beyond that shot's explicit list (most shots have her holding only ONE prop at a time; a shot that says she holds two, like pouring milk into a held mug, is the deliberate exception, not a license to add more).
 - EXACT CAT FACIAL & FUR MARKINGS (100% IDENTICAL IN ALL SHOTS): Exactly match Reference Image 1 (Nini the calico cat). The head/forehead has light orange/ginger tabby fur patches with small tiger stripes, white snout/lower face, pink nose, and white chest. NO heavy solid black patches on forehead or ears. MUST match Shot 1 and Shot 3 fur coloring.
 - EXACT BACKGROUND LAYOUT (100% IDENTICAL IN ALL SHOTS):
   - Viewer's LEFT background: Professional stainless steel espresso machine.
@@ -48,6 +48,12 @@ GLOBAL_CONSTRAINTS = """
   - Far LEFT counter: POS Machine resting spot.
   - CENTER counter: white ceramic mug, with the small milk pitcher sitting right next to it.
   - Far RIGHT counter: Bialetti Moka Express pot (black handle strictly on RIGHT side, mustache man logo on front).
+- IDENTICAL RESTING POSE FOR EVERY PROP (CRITICAL — applies to ANY shot where a prop is resting, i.e. not currently held): each resting prop keeps the EXACT SAME position, angle, tilt, and distance from the counter edge in every single shot it appears resting in. Specifically:
+  - POS MACHINE: stands upright on its base, tilted a fixed ~10-degree angle toward the viewer, screen facing forward, positioned at the same spot on the far-left counter corner and the same distance from the left frame edge — identical in Shot 2, Shot 3, and Shot 4. It never leans at a different angle, moves closer to/further from the edge, or changes position between shots.
+  - MOKA POT: stands upright on the far-right counter corner, same distance from the right frame edge, same angle, whenever it is resting (Shot 1, and Shot 3/4 after being set back down).
+  - MILK PITCHER: sits upright next to the mug, same angle and distance from the mug, whenever resting.
+  A prop's rendered position must look like it was never touched between shots — as if physically glued in place — except when that shot's own instructions explicitly move it into a paw.
+- NO PROP MAY BE CROPPED OUT OF FRAME: even in a closer/zoomed-in camera framing (e.g. Shot 3, Shot 4), the composition MUST still keep every currently-resting prop fully visible within the image — do not let the closer framing push the POS machine, mug, milk pitcher, or Moka pot completely outside the visible frame.
 - CAT-TO-PROP SCALE RATIO (IDENTICAL REAL-WORLD SIZE ACROSS ALL SHOTS): Cat Nini's actual body size never changes between shots. The wooden counter edge always reaches Nini's lower ribcage/belly, and the Moka pot's height is always about 45% of Nini's head-to-shoulder height. A closer camera framing (e.g. a close-up shot) is only a ZOOM/CROP change — it must NOT be drawn as if the cat, counter, or props physically grew larger; the proportions between cat, counter, and props stay mathematically identical in every shot.
 - CAT APPEARANCE & CLOTHING: Exactly match Reference Image 1 (Nini the calico cat) wearing the EXACT SAME brown leather work apron with neck strap and front pocket, plus the EXACT SAME round employee ID tag on a cord necklace, in ALL shots.
 - POS MACHINE APPEARANCE: Light grey front casing, glowing green screen at top, 3x4 numeric button grid layout. EXACT SAME shape, size, and color in every shot regardless of whether it is held or resting.
@@ -96,15 +102,19 @@ Cinematic warm golden cafe lighting, 8K calico fur detail.""",
         "id": "shot3",
         "title": "Shot 3（8–12s）：倒牛奶拉花的同時忍不住偷喝一口",
         "description": "妮妮拿牛奶壺往杯裡倒奶泡拉愛心的同時，忍不住把壺嘴湊到嘴邊偷喝一口，嘴角沾著奶、瞇眼陶醉，牛奶仍在倒",
-        "prompt": """Photorealistic 3D rendered storyboard frame. Continuation from Shot 2. Close-up or medium shot (a camera zoom only — Nini's actual body size and her proportions relative to the counter and props are IDENTICAL to Shot 1 and Shot 2, just framed closer).
+        "prompt": """WARNING ABOUT THE REFERENCE ANCHOR IMAGE: copy ONLY the wall color, shelf style, lighting warmth, wood tones, and character design from the master anchor reference — do NOT copy its exact countertop object arrangement. This shot's arrangement is different and is fully specified below.
+
+COUNT CHECK — this image contains EXACTLY 4 props total, no more:
+  Object 1 (far left counter, fully visible, not cropped): the POS card reader, resting upright, untouched.
+  Object 2 (far right counter, fully visible): the Moka pot, resting (set back down after Shot 2's pour), untouched.
+  Object 3 (held in the cat's ONE paw): the white ceramic mug (already holding dark espresso from Shot 2), lifted up to chest height, tilted slightly to receive the milk pour.
+  Object 4 (held in the cat's OTHER paw): the milk pitcher (the SAME opaque white ceramic pitcher present since Shot 1, NOT glass), tilted, actively pouring a stream of milk down into Object 3 to create heart latte art.
+That is the complete list — BOTH of the cat's paws are occupied (one with the mug, one with the pitcher) and that is intentional in this shot only. The CENTER of the counter, where the mug normally rests, is BARE EMPTY WOOD right now since the mug is being held — do NOT place any object there, and do NOT draw a second mug or cup anywhere in the image.
+
+Photorealistic 3D rendered storyboard frame. Continuation from Shot 2. Close-up or medium shot (a camera zoom only — Nini's actual body size and her proportions relative to the counter and props are IDENTICAL to Shot 1 and Shot 2, just framed closer; Objects 1 and 2 above must still be fully visible, not cropped out).
 The cat's forehead is entirely light orange/ginger tabby fur. White snout, pink nose, white chest, green eyes. WEARING THE EXACT SAME BROWN LEATHER WORK APRON, plus the SAME round employee ID tag on a cord necklace. She is a part-time cafe employee at work behind the staff counter, not a customer.
 BACKGROUND LAYOUT (EXACT SAME AS SHOT 1 & 2): Professional stainless steel espresso machine on viewer's LEFT background; dark wooden shelves on viewer's RIGHT background; hanging amber Edison lights with golden bokeh.
-COUNTERTOP LAYOUT:
-- Far LEFT counter: The EXACT SAME light grey POS machine rests on the far-left counter corner, untouched.
-- Far RIGHT counter: The EXACT SAME small Bialetti Moka pot now rests back on its far-right counter spot (set down after Shot 2's espresso pour), untouched.
-- CENTER counter: The white ceramic mug (already holding dark espresso poured in Shot 2) sits stationary in the center, currently receiving a stream of milk.
-- Cat holds the ONLY milk pitcher (the SAME opaque white ceramic pitcher present since Shot 1, NOT glass) in one paw, tilted, actively pouring a stream of milk into the mug to create heart latte art. The pitcher's usual counter spot is EMPTY right now since it is being held — do NOT also draw it resting on the counter.
-ACTION (the pour and the secret sip happen AT THE SAME TIME — do not separate them into two moments): WHILE she is still mid-pour, with the milk stream still visibly flowing from the pitcher spout into the mug, Nini leans her head down and sneaks the pitcher's spout to her mouth for a quick secret sip/lick without stopping the pour. Her eyes are closed in pure bliss. A tiny drop of white milk is visible on her pink nose and the corner of her mouth. Expression: the perfect mix of guilty pleasure and satisfaction — blushing cheeks, a suppressed happy smile, slightly hunched posture as if hoping nobody saw — all while the pitcher is still tilted and pouring.
+ACTION (the pour and the secret sip happen AT THE SAME TIME — do not separate them into two moments): WHILE she is still mid-pour, with the milk stream still visibly flowing from the pitcher spout down into the held mug, Nini leans her head down toward the pitcher and sneaks its spout to her mouth for a quick secret sip/lick without stopping the pour. Her eyes are closed in pure bliss. A tiny drop of white milk is visible on her pink nose and the corner of her mouth. Expression: the perfect mix of guilty pleasure and satisfaction — blushing cheeks, a suppressed happy smile, slightly hunched posture as if hoping nobody saw — all while the pitcher is still tilted and pouring.
 Soft warm golden cinematic lighting, 8K calico fur detail.""",
     },
     {
