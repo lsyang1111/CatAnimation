@@ -76,16 +76,20 @@ Cinematic warm golden cafe lighting, 8K fur texture.""",
         "id": "shot2",
         "title": "Shot 2（4–8s）：倒咖啡，眼神飄向牛奶",
         "description": "妮妮穿棕圍裙，左爪握摩卡壺把手倒咖啡，但眼神悄悄飄向旁邊的牛奶罐，露出渴望的神情",
-        "prompt": """Photorealistic 3D rendered storyboard frame. Continuation from Shot 1.
+        "prompt": """WARNING ABOUT THE REFERENCE ANCHOR IMAGE: the master anchor image (Shot 1) shows FOUR objects sitting on the counter (POS, mug, milk pitcher, Moka pot). Copy ONLY its wall color, shelf style, lighting color/warmth, wood tones, and the cat's character design from that reference — do NOT copy its countertop object arrangement. This shot's countertop arrangement is DIFFERENT and is specified fully below; follow the list below, not the reference image's counter.
+
+COUNT CHECK — the counter surface in this image holds EXACTLY 3 objects, no more:
+  Object 1 (far left): the POS card reader, resting.
+  Object 2 (center): the white ceramic mug, resting, receiving a pour of dark espresso from the Moka pot above it.
+  Object 3 (right of the mug): the small opaque white ceramic milk pitcher, resting.
+That is the complete list. There is NO 4th object on the counter — specifically, do NOT add a second mug, a second cup, or a second Moka pot anywhere on the counter. The Moka pot itself is NOT on the counter at all in this shot — it is being held up in the cat's paw, off the counter surface, mid-pour.
+
+Photorealistic 3D rendered storyboard frame. Continuation from Shot 1. Copy the master anchor image's background, lighting, wood tones, and character design exactly.
 The cat's forehead is entirely light orange/ginger tabby fur with small tiger stripes. White snout, pink nose, white chest, green eyes. WEARING THE EXACT SAME BROWN LEATHER WORK APRON WITH NECK STRAP AND FRONT POCKET, plus the SAME round employee ID tag on a cord necklace. She is a part-time cafe employee at work behind the staff counter, not a customer.
 BACKGROUND LAYOUT (EXACT SAME AS SHOT 1): Professional stainless steel espresso machine on viewer's LEFT background; dark wooden shelves with coffee bags on viewer's RIGHT background; hanging amber Edison lights with golden bokeh.
-COUNTERTOP LAYOUT (props keep the SAME size/design as Shot 1, but the Moka pot has moved from its resting spot into the cat's paw — it exists ONLY here, nowhere else in frame):
-- Far LEFT counter: The EXACT SAME light grey POS card reader with glowing green screen rests ALONE on the far-left counter corner, untouched.
-- CENTER counter: There is ONLY ONE mug-like vessel here: the white ceramic mug, stationary, directly under the Moka pot spout, receiving dark espresso. Do NOT draw any second mug or cup anywhere on the counter.
-- Next to the mug: the SAME small opaque white ceramic milk pitcher (matte ceramic, NOT glass) that has already been sitting on the counter since Shot 1 — still untouched for now. The pitcher is a visibly SMALLER, narrower shape with a pouring spout — it must look clearly different from the mug, never like a second mug.
-- Cat uses its LEFT PAW (the paw on viewer's RIGHT side) to hold the ONLY Bialetti Moka pot by its RIGHT-SIDE black plastic handle, tilting the spout towards the center mug. The far-right counter corner (the pot's usual resting spot) is EMPTY right now — do NOT draw a second Moka pot sitting there while this one is being held.
-- MOKA POT DETAILS: The iconic Bialetti mustache-man mascot logo and BIALETTI text clearly visible on the front. Black handle remains strictly on the RIGHT side.
-EXPRESSION: The cat's eyes drift sideways toward the milk jug with a longing, tempted expression — a gentle internal struggle between duty and desire. Slight cheek flush of temptation.
+ACTION: The cat's LEFT PAW (viewer's RIGHT) holds the ONLY Moka pot in the scene by its RIGHT-side black handle, held up above the counter, tilted, pouring a stream of dark espresso down into Object 2 (the mug). The cat's other paw is empty, resting at her side, holding nothing and touching nothing.
+MOKA POT DETAILS: Bialetti mustache-man mascot logo and BIALETTI text visible on the front. Black handle strictly on the RIGHT side.
+EXPRESSION: The cat's eyes drift sideways toward Object 3 (the milk pitcher) with a longing, tempted expression — a gentle internal struggle between duty and desire. Slight cheek flush of temptation.
 Cinematic warm golden cafe lighting, 8K calico fur detail.""",
     },
     {
