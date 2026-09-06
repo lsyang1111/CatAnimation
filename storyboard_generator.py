@@ -41,10 +41,11 @@ GLOBAL_CONSTRAINTS = """
   - Viewer's LEFT background: Professional stainless steel espresso machine.
   - Viewer's RIGHT background: Dark wooden shelves with coffee bean bags and glass jars, hanging amber Edison bulb lights with soft golden bokeh.
   - Ambient moka_cat_12s warm golden lighting.
-- PROP COUNT — EXACTLY ONE OF EACH, NEVER DUPLICATED: There is exactly ONE POS machine, ONE Moka pot, and ONE white ceramic mug in the ENTIRE scene at all times. Each prop has a single physical instance that moves between the cat's paws and the counter across shots — it is NEVER shown in two places at once. If a prop is currently being held in a paw (the mug, the Moka pot, or the POS machine), its usual counter spot for that prop is EMPTY in that shot — do NOT also draw it resting on the counter at the same time. Before finishing each image, double check: count each prop type and confirm only one instance of it exists anywhere in the frame.
+- PROP COUNT — EXACTLY ONE OF EACH, NEVER DUPLICATED: There is exactly ONE POS machine, ONE Moka pot, ONE white ceramic mug, and ONE small milk jug/glass of milk in the ENTIRE scene at all times. Each prop has a single physical instance that moves between the cat's paws and the counter across shots — it is NEVER shown in two places at once. If a prop is currently being held in a paw (the mug, the Moka pot, or the POS machine), its usual counter spot for that prop is EMPTY in that shot — do NOT also draw it resting on the counter at the same time. Before finishing each image, double check: count each prop type and confirm only one instance of it exists anywhere in the frame.
+- NO PROP MAY APPEAR OUT OF NOWHERE (CRITICAL): every prop that is used in ANY shot — the POS machine, the Moka pot, the mug, AND the milk jug/glass of milk — MUST already be visibly sitting on the counter starting in SHOT 1, even before it is used. A prop is never allowed to be introduced for the first time in Shot 2, 3, or 4. Shot 1 shows all four props laid out on the counter (the milk jug is simply unused and untouched at this point).
 - EXACT COUNTERTOP OBJECT PLACEMENT WHEN RESTING (VIEWER'S PERSPECTIVE) — applies only when a prop is not currently being held:
   - Far LEFT counter: POS Machine resting spot.
-  - CENTER counter: white ceramic mug.
+  - CENTER counter: white ceramic mug, with the small milk jug/glass of milk sitting right next to it.
   - Far RIGHT counter: Bialetti Moka Express pot (black handle strictly on RIGHT side, mustache man logo on front).
 - CAT-TO-PROP SCALE RATIO (IDENTICAL REAL-WORLD SIZE ACROSS ALL SHOTS): Cat Nini's actual body size never changes between shots. The wooden counter edge always reaches Nini's lower ribcage/belly, and the Moka pot's height is always about 45% of Nini's head-to-shoulder height. A closer camera framing (e.g. a close-up shot) is only a ZOOM/CROP change — it must NOT be drawn as if the cat, counter, or props physically grew larger; the proportions between cat, counter, and props stay mathematically identical in every shot.
 - CAT APPEARANCE & CLOTHING: Exactly match Reference Image 1 (Nini the calico cat) wearing the EXACT SAME brown leather work apron with neck strap and front pocket, plus the EXACT SAME round employee ID tag on a cord necklace, in ALL shots.
@@ -65,7 +66,7 @@ SHOTS = [
 a PART-TIME CAFE EMPLOYEE (not a customer), wearing a brown leather work apron and a round employee ID tag on a cord necklace,
 standing on the STAFF side behind a dark warm wooden barista counter inside a cozy ambient cafe, at work.
 BACKGROUND LAYOUT (STRICT): Professional stainless steel espresso machine on viewer's LEFT background; dark wooden shelves with coffee bags and glass jars on viewer's RIGHT background; hanging amber Edison bulb lights with golden bokeh.
-COUNTERTOP LAYOUT: Center has ONE empty white ceramic mug. Far RIGHT counter has ONE small classic Bialetti Moka Express octagonal aluminum Moka pot (mustache man logo on front, black handle strictly on RIGHT side).
+COUNTERTOP LAYOUT: Center has ONE empty white ceramic mug, with ONE small white milk jug (or glass of fresh white milk) sitting right next to it, untouched and unused for now. Far RIGHT counter has ONE small classic Bialetti Moka Express octagonal aluminum Moka pot (mustache man logo on front, black handle strictly on RIGHT side). ALL props that will ever appear in this story (POS machine, mug, milk jug, Moka pot) are already visible here in Shot 1 — nothing will be introduced later that isn't already on this counter.
 POS MACHINE: The cat holds ONE light grey POS card reader with glowing green screen up with its right paw on viewer's LEFT toward the camera.
 Green confirmation light glows on POS screen. Cat expression is professional and friendly.
 Cinematic warm golden cafe lighting, 8K fur texture.""",
@@ -79,8 +80,8 @@ The cat's forehead is entirely light orange/ginger tabby fur with small tiger st
 BACKGROUND LAYOUT (EXACT SAME AS SHOT 1): Professional stainless steel espresso machine on viewer's LEFT background; dark wooden shelves with coffee bags on viewer's RIGHT background; hanging amber Edison lights with golden bokeh.
 COUNTERTOP LAYOUT (props keep the SAME size/design as Shot 1, but the Moka pot has moved from its resting spot into the cat's paw — it exists ONLY here, nowhere else in frame):
 - Far LEFT counter: The EXACT SAME light grey POS card reader with glowing green screen rests ALONE on the far-left counter corner, untouched.
-- CENTER counter: ONE white ceramic mug stationary in center receiving dark espresso from the Moka pot spout.
-- Next to the mug: ONE small white milk jug or glass of fresh white milk sits on the counter.
+- CENTER counter: There is ONLY ONE mug-like vessel here: the white ceramic mug, stationary, directly under the Moka pot spout, receiving dark espresso. Do NOT draw any second mug or cup anywhere on the counter.
+- Next to the mug: the SAME small milk jug that has already been sitting on the counter since Shot 1 — still untouched for now. The jug is a visibly SMALLER, narrower pitcher shape with a pouring spout — it must look clearly different from the mug, never like a second mug.
 - Cat uses its LEFT PAW (the paw on viewer's RIGHT side) to hold the ONLY Bialetti Moka pot by its RIGHT-SIDE black plastic handle, tilting the spout towards the center mug. The far-right counter corner (the pot's usual resting spot) is EMPTY right now — do NOT draw a second Moka pot sitting there while this one is being held.
 - MOKA POT DETAILS: The iconic Bialetti mustache-man mascot logo and BIALETTI text clearly visible on the front. Black handle remains strictly on the RIGHT side.
 EXPRESSION: The cat's eyes drift sideways toward the milk jug with a longing, tempted expression — a gentle internal struggle between duty and desire. Slight cheek flush of temptation.
@@ -95,7 +96,7 @@ The cat's forehead is entirely light orange/ginger tabby fur. White snout, pink 
 BACKGROUND LAYOUT (EXACT SAME AS SHOT 1 & 2): Professional stainless steel espresso machine on viewer's LEFT background; dark wooden shelves on viewer's RIGHT background; hanging amber Edison lights with golden bokeh.
 COUNTERTOP LAYOUT:
 - Far LEFT counter: The EXACT SAME light grey POS machine rests on the far-left counter corner. The POS machine is resting untouched, upright on the counter.
-- CENTER counter: The white ceramic mug and small white milk jug are on the counter.
+- CENTER counter: The white ceramic mug and the SAME small white milk jug (present since Shot 1) are on the counter — the jug is now visibly less full since Nini is sipping from it.
 - Far RIGHT counter: The EXACT SAME small Bialetti Moka pot sits on counter (black handle strictly on RIGHT side, logo on front).
 ACTION: Nini has just stolen a sip of milk. She is caught in the act — leaning slightly forward with her eyes closed in pure bliss, a tiny drop of white milk visible on her pink nose and the corner of her mouth. Her expression is the perfect mix of guilty pleasure and satisfaction: blushing cheeks, a suppressed happy smile, and a slightly hunched-in posture as if hoping nobody saw.
 Soft warm golden cinematic lighting, 8K calico fur detail.""",
@@ -109,7 +110,7 @@ The cat's forehead is entirely light orange/ginger tabby fur. White snout, pink 
 BACKGROUND LAYOUT (EXACT SAME AS ALL PREVIOUS SHOTS): Professional stainless steel espresso machine on viewer's LEFT background; dark wooden shelves on viewer's RIGHT background; hanging amber Edison lights with golden bokeh.
 COUNTERTOP LAYOUT:
 - Far LEFT counter: The EXACT SAME light grey POS machine rests on the far-left counter corner. The POS machine is resting untouched, upright on the counter.
-- CENTER counter: EMPTY — the mug is not on the counter right now. Cat holds the ONLY white ceramic mug (the same one from Shot 1-3) with a beautiful heart latte art on top with BOTH PAWS, extending it warmly toward the viewer. BOTH of her paws are occupied ONLY with this mug — she is NOT holding the POS machine or any other object; it stays on the far-left counter, untouched. Do NOT draw a second mug anywhere on the counter.
+- CENTER counter: The mug's usual spot is now EMPTY (the mug itself is being held, see below); the SAME small milk jug from Shot 1-3 still sits there quietly, now noticeably less full. Cat holds the ONLY white ceramic mug (the same one from Shot 1-3) with a beautiful heart latte art on top with BOTH PAWS, extending it warmly toward the viewer. BOTH of her paws are occupied ONLY with this mug — she is NOT holding the POS machine or any other object; it stays on the far-left counter, untouched. Do NOT draw a second mug anywhere on the counter.
 - Far RIGHT counter: The EXACT SAME small Bialetti Moka pot sits on counter (black handle strictly on RIGHT side, logo on front).
 EXPRESSION: A sweet, warm, professional barista smile — but with a tiny hint of guilt and mischief in the eyes, as if she is hoping the customer did not notice she sipped the milk. A nearly invisible tiny white milk residue trace remains at the very corner of her lip. Eyes are twinkling with a cheerful, slightly sheepish warmth.
 Soft warm golden cinematic lighting, 8K calico fur texture.""",
