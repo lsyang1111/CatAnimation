@@ -39,9 +39,10 @@ Smooth subtle cinematic motion. Warm golden cafe lighting.""",
         "output_name": "shot3.mp4",
         "image_path": os.path.join(out_dir, "storyboards", "shot3_20260904_215351.png"),
         "prompt": """Photorealistic 3D animation, 4 seconds. Continuation from Shot 2.
-The cat leans forward and sneaks a sip from the milk jug — unable to resist any longer.
-Eyes close slowly in pure bliss. A tiny drop of white milk appears on the pink nose and the corner of the mouth.
-The cat's shoulders hunch in slightly, as if hoping nobody saw. Blushing cheeks, a suppressed happy smile.
+The cat leans forward and naturally takes a gentle, peaceful sip from the milk jug.
+Eyes close slowly in pure bliss and relaxation, enjoying the rich fresh milk.
+A tiny drop of white milk appears on the pink nose and corner of the mouth.
+The cat's expression is calm, sweet, and completely content — relaxed and natural with no guilt.
 Smooth cinematic motion. Warm golden cafe lighting.""",
     },
     {

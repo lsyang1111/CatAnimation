@@ -84,8 +84,8 @@ Cinematic warm golden cafe lighting, 8K calico fur detail.""",
     },
     {
         "id": "shot3",
-        "title": "Shot 3（8–12s）：忍不住偷喝一口牛奶",
-        "description": "妮妮忍不住低頭偷喝一口牛奶，嘴角沾著奶，眼睛閉著享受，一臉滿足又帶點罪惡感的可愛表情",
+        "title": "Shot 3（8–12s）：自然品嚐鮮奶",
+        "description": "妮妮低頭自然輕鬆地喝一口鮮奶，眼睛微閉享受香醇奶香，神情十分放鬆自在與滿足",
         "prompt": """Photorealistic 3D rendered storyboard frame. Continuation from Shot 2. Close-up or medium shot.
 The cat's forehead is entirely light orange/ginger tabby fur. White snout, pink nose, white chest, green eyes. WEARING THE EXACT SAME BROWN LEATHER APRON.
 BACKGROUND LAYOUT (EXACT SAME AS SHOT 1 & 2): Professional stainless steel espresso machine on viewer's LEFT background; dark wooden shelves on viewer's RIGHT background; hanging amber Edison lights with golden bokeh.
@@ -93,7 +93,7 @@ COUNTERTOP LAYOUT:
 - Far LEFT counter: The EXACT SAME light grey POS machine rests on the far-left counter corner. The POS machine is resting untouched, upright on the counter.
 - CENTER counter: The white ceramic mug and small white milk jug are on the counter.
 - Far RIGHT counter: The EXACT SAME small Bialetti Moka pot sits on counter (black handle strictly on RIGHT side, logo on front).
-ACTION: Nini has just stolen a sip of milk. She is caught in the act — leaning slightly forward with her eyes closed in pure bliss, a tiny drop of white milk visible on her pink nose and the corner of her mouth. Her expression is the perfect mix of guilty pleasure and satisfaction: blushing cheeks, a suppressed happy smile, and a slightly hunched-in posture as if hoping nobody saw.
+ACTION: Nini naturally takes a peaceful, gentle sip from the milk jug. She leans slightly forward with her eyes closed in pure relaxation and enjoyment, tasting the rich fresh milk. Her expression is calm, sweet, and content — completely natural, happy, and relaxed with no guilt or hesitation. A tiny drop of white milk rests gently on her pink nose.
 Soft warm golden cinematic lighting, 8K calico fur detail.""",
     },
     {
