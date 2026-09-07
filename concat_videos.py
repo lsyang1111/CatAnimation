@@ -10,8 +10,9 @@ shot_paths = [
     os.path.join(out_dir, "shot3.mp4"),
     os.path.join(out_dir, "shot4.mp4"),
 ]
-output_path = os.path.join(out_dir, "nini_final_16s.mp4")
-print("[Nini 16s mode] Concatenating shot1/shot2/shot3/shot4 -> nini_final_16s.mp4")
+output_path = os.path.join(out_dir, "nini_final_32s.mp4")
+print("[Nini mode] Concatenating shot1/shot2/shot3/shot4 -> nini_final_32s.mp4")
+print("Note: Veo 3.1 fast-generate-preview renders 8s per shot regardless of the 4s requested in the prompt, so 4 shots = 32s total.")
 
 clips_to_concat = []
 
