@@ -27,9 +27,10 @@ from google.genai import types
 PROJECT_NAME = "三花貓妮妮咖啡廳系列"
 
 # 參考照片路徑（設定後 AI 會以這些照片作為角色與道具外觀基準）
-NINI_REF_PATH = r"C:\Users\lsyan\Documents\Code\CatAnimation\nini_reference.jpg"
-MOKA_REF_PATH = r"C:\Users\lsyan\Documents\Code\CatAnimation\moka_reference.png"
-POS_REF_PATH = r"C:\Users\lsyan\Documents\Code\CatAnimation\pos_reference.png"
+_SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+NINI_REF_PATH = os.path.join(_SCRIPT_DIR, "nini_reference.jpg")
+MOKA_REF_PATH = os.path.join(_SCRIPT_DIR, "moka_reference.png")
+POS_REF_PATH = os.path.join(_SCRIPT_DIR, "pos_reference.png")
 
 # 全局硬性規則（會自動加到每段 prompt 前面）
 GLOBAL_CONSTRAINTS = """
