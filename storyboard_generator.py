@@ -47,6 +47,7 @@ GLOBAL_CONSTRAINTS = """
 - CAT APPEARANCE & CLOTHING: Exactly match Reference Image 1 (Nini the calico cat) wearing the EXACT SAME brown leather apron with neck strap and front pocket in ALL shots.
 - POS MACHINE APPEARANCE: Light grey front casing, glowing green screen at top, 3x4 numeric button grid layout. EXACT SAME in Shot 1, Shot 2, and Shot 3.
 - ONE white ceramic mug. NEVER changes shape, size, or style.
+- PROP CONSISTENCY (COLOR / ANGLE / SHAPE / HEIGHT): The POS machine, Moka pot, ceramic mug, and milk jug MUST keep IDENTICAL color, viewing angle, shape, and height/scale in EVERY shot. No prop may rotate to show a different face, change apparent size, or shift proportions between shots.
 - All objects obey gravity. Nothing floats.
 === END CONSTRAINTS ===
 """
@@ -84,16 +85,17 @@ Cinematic warm golden cafe lighting, 8K calico fur detail.""",
     },
     {
         "id": "shot3",
-        "title": "Shot 3（8–12s）：忍不住偷喝一口牛奶",
-        "description": "妮妮忍不住低頭偷喝一口牛奶，嘴角沾著奶，眼睛閉著享受，一臉滿足又帶點罪惡感的可愛表情",
+        "title": "Shot 3（8–12s）：自然地喝一口牛奶",
+        "description": "妮妮自然地低頭喝一口牛奶，動作輕鬆自在、不帶罪惡感，喝完滿足地瞇眼微笑",
         "prompt": """Photorealistic 3D rendered storyboard frame. Continuation from Shot 2. Close-up or medium shot.
 The cat's forehead is entirely light orange/ginger tabby fur. White snout, pink nose, white chest, green eyes. WEARING THE EXACT SAME BROWN LEATHER APRON.
 BACKGROUND LAYOUT (EXACT SAME AS SHOT 1 & 2): Professional stainless steel espresso machine on viewer's LEFT background; dark wooden shelves on viewer's RIGHT background; hanging amber Edison lights with golden bokeh.
-COUNTERTOP LAYOUT:
-- Far LEFT counter: The EXACT SAME light grey POS machine rests on the far-left counter corner. The POS machine is resting untouched, upright on the counter.
-- CENTER counter: The white ceramic mug and small white milk jug are on the counter.
-- Far RIGHT counter: The EXACT SAME small Bialetti Moka pot sits on counter (black handle strictly on RIGHT side, logo on front).
-ACTION: Nini has just stolen a sip of milk. She is caught in the act — leaning slightly forward with her eyes closed in pure bliss, a tiny drop of white milk visible on her pink nose and the corner of her mouth. Her expression is the perfect mix of guilty pleasure and satisfaction: blushing cheeks, a suppressed happy smile, and a slightly hunched-in posture as if hoping nobody saw.
+COUNTERTOP LAYOUT (EXACT SAME COLOR, ANGLE, SHAPE, AND HEIGHT AS PREVIOUS SHOTS):
+- Far LEFT counter: The EXACT SAME light grey POS machine rests on the far-left counter corner, same angle and height as Shot 1 and Shot 2.
+- CENTER counter: The white ceramic mug and small white milk jug are on the counter, same size, color, and position as Shot 2.
+- Far RIGHT counter: The EXACT SAME small Bialetti Moka pot sits on counter (black handle strictly on RIGHT side, logo on front), same angle and height as previous shots.
+ACTION: Nini calmly and naturally leans down and takes a relaxed sip of milk straight from the jug, as a normal little break — not sneaky, not secretive, just an easy, unhurried moment.
+EXPRESSION: Eyes gently closed in simple contentment, a soft natural smile, shoulders relaxed and open with no tension or hunching. A tiny drop of white milk rests on her pink nose and the corner of her mouth, purely from drinking — no sign of worry or guilt.
 Soft warm golden cinematic lighting, 8K calico fur detail.""",
     },
     {
@@ -103,11 +105,11 @@ Soft warm golden cinematic lighting, 8K calico fur detail.""",
         "prompt": """Photorealistic 3D rendered storyboard frame. Final shot. Close-up inside cozy ambient cafe.
 The cat's forehead is entirely light orange/ginger tabby fur. White snout, pink nose, white chest, bright green eyes. WEARING THE EXACT SAME BROWN LEATHER APRON.
 BACKGROUND LAYOUT (EXACT SAME AS ALL PREVIOUS SHOTS): Professional stainless steel espresso machine on viewer's LEFT background; dark wooden shelves on viewer's RIGHT background; hanging amber Edison lights with golden bokeh.
-COUNTERTOP LAYOUT:
-- Far LEFT counter: The EXACT SAME light grey POS machine rests on the far-left counter corner. The POS machine is resting untouched, upright on the counter.
+COUNTERTOP LAYOUT (EXACT SAME COLOR, ANGLE, SHAPE, AND HEIGHT AS PREVIOUS SHOTS):
+- Far LEFT counter: The EXACT SAME light grey POS machine rests on the far-left counter corner, same angle and height as all previous shots. The POS machine is resting untouched, upright on the counter.
 - CENTER counter: Cat holds ONE white ceramic mug with a beautiful heart latte art on top with BOTH PAWS, extending it warmly toward the viewer.
-- Far RIGHT counter: The EXACT SAME small Bialetti Moka pot sits on counter (black handle strictly on RIGHT side, logo on front).
-EXPRESSION: A sweet, warm, professional barista smile — but with a tiny hint of guilt and mischief in the eyes, as if she is hoping the customer did not notice she sipped the milk. A nearly invisible tiny white milk residue trace remains at the very corner of her lip. Eyes are twinkling with a cheerful, slightly sheepish warmth.
+- Far RIGHT counter: The EXACT SAME small Bialetti Moka pot sits on counter (black handle strictly on RIGHT side, logo on front), same angle and height as previous shots.
+EXPRESSION: A sweet, warm, professional barista smile, cheerful and relaxed. A nearly invisible tiny white milk residue trace remains at the very corner of her lip. Eyes are twinkling with warm, genuine happiness — content and playful, no guilt.
 Soft warm golden cinematic lighting, 8K calico fur texture.""",
     },
 ]
