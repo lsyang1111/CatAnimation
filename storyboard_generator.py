@@ -48,7 +48,7 @@ GLOBAL_CONSTRAINTS = """
 - POS MACHINE APPEARANCE: Light grey front casing, glowing green screen at top, 3x4 numeric button grid layout. EXACT SAME in Shot 1, Shot 2, and Shot 3.
 - ONE white ceramic mug. NEVER changes shape, size, or style.
 - PROP CONSISTENCY (COLOR / ANGLE / SHAPE / HEIGHT): The POS machine, Moka pot, ceramic mug, and milk jug MUST keep IDENTICAL color, viewing angle, shape, and height/scale in EVERY shot. No prop may rotate to show a different face, change apparent size, or shift proportions between shots.
-- All objects obey gravity. Nothing floats.
+- GRAVITY / PHYSICAL CONTACT (STRICT, REAL-WORLD PHYSICS): Every prop not currently held by the cat's paws MUST rest fully and directly on the counter surface with its full base touching the countertop — no floating, no hovering, no gap between object and surface, no clipping through the counter. Held objects must be fully gripped by the cat's paw/paws with visible contact, never appearing to float near the paw.
 === END CONSTRAINTS ===
 """
 
