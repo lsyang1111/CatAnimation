@@ -82,6 +82,7 @@ with open(ops_file, "w") as f:
                 image_bytes=img_bytes,
                 mime_type=mime,
             ),
+            config=types.GenerateVideosConfig(duration_seconds=4),
         )
         line = f"{name}|{op.name}"
         f.write(line + "\n")

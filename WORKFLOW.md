@@ -68,6 +68,7 @@ CatAnimation/
 | **引力／實體接觸** | 沒被貓爪拿著的道具，底面必須完整貼合在吧台桌面上，不能懸空、飄浮、或穿透桌面；被抓握的道具要有明確的爪子接觸 | 這是地球，有引力，道具不能無故懸空 |
 | **情緒自然度** | 貓咪的動作與表情要符合情境、自然合理，除非劇情明確需要，避免不必要的緊張、心虛、罪惡感等負面轉折 | 保持角色可愛親切的整體調性 |
 | **主影格鏈接（Master Anchor）** | Shot 1 生成後鎖定為基準影格，後續每個 shot 都要附上這張圖作為參考，確保背景／貓咪外觀／道具 100% 一致 | `storyboard_generator.py` 已內建此機制，新腳本沿用即可 |
+| **影片長度用 API 參數控制** | `generate_videos()` 呼叫時要加 `config=types.GenerateVideosConfig(duration_seconds=4)`。**在 prompt 文字裡寫「4 seconds」沒有用**，模型不會照著剪，Veo 3.1 fast-generate-preview 沒指定時預設輸出 8 秒 | 避免最終影片秒數跟腳本設計對不上（曾發生 4 段×4s 誤生成為 4 段×8s = 32s） |
 
 範例寫法（加在 `GLOBAL_CONSTRAINTS` 或影片 prompt 中）：
 

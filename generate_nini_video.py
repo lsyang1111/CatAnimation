@@ -94,6 +94,7 @@ for shot in SHOT_CONFIGS:
         model="veo-3.1-fast-generate-preview",
         prompt=prompt,
         image=image_input,
+        config=types.GenerateVideosConfig(duration_seconds=4),
     )
     print(f"  [SUBMITTED] {name} -> {op.name}")
     operations.append((name, op.name))
