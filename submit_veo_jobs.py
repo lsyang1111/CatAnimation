@@ -14,12 +14,12 @@ from google import genai
 from google.genai import types
 
 client = genai.Client(api_key=API_KEY)
-out_dir = r"c:\Users\lsyan\Documents\Code\CatAnimation"
+out_dir = os.path.dirname(os.path.abspath(__file__))
 
 SHOT_CONFIGS = [
     {
         "output_name": "shot1.mp4",
-        "image_path": os.path.join(out_dir, "storyboards", "shot1_20260904_215307.png"),
+        "image_path": os.path.join(out_dir, "storyboards", "shot1_20260907_015223.png"),
         "prompt": """Photorealistic 3D animation, 4 seconds. Cozy warm cafe interior.
 The cat barista holds a POS card reader toward the camera with its right paw.
 A credit card taps the device. The green screen light flashes with confirmation.
@@ -30,7 +30,7 @@ Smooth subtle cinematic camera motion. Warm golden ambient cafe lighting.""",
     },
     {
         "output_name": "shot2.mp4",
-        "image_path": os.path.join(out_dir, "storyboards", "shot2_20260904_215331.png"),
+        "image_path": os.path.join(out_dir, "storyboards", "shot2_20260907_015237.png"),
         "prompt": """Photorealistic 3D animation, 4 seconds. Continuation from Shot 1.
 The cat barista tilts the Moka pot to pour dark espresso into the white ceramic mug.
 While pouring, the cat's eyes drift sideways toward the small milk jug on the counter with a longing, tempted expression.
@@ -41,7 +41,7 @@ Smooth subtle cinematic motion. Warm golden cafe lighting.""",
     },
     {
         "output_name": "shot3.mp4",
-        "image_path": os.path.join(out_dir, "storyboards", "shot3_20260904_215351.png"),
+        "image_path": os.path.join(out_dir, "storyboards", "shot3_20260907_015246.png"),
         "prompt": """Photorealistic 3D animation, 4 seconds. Continuation from Shot 2.
 The cat calmly and naturally leans down and takes a relaxed sip of milk straight from the jug, as an easy, unhurried little break — not sneaky or secretive.
 Eyes close gently in simple contentment. A tiny drop of white milk appears on the pink nose and the corner of the mouth.
@@ -52,7 +52,7 @@ Smooth cinematic motion. Warm golden cafe lighting.""",
     },
     {
         "output_name": "shot4.mp4",
-        "image_path": os.path.join(out_dir, "storyboards", "shot4_20260904_215409.png"),
+        "image_path": os.path.join(out_dir, "storyboards", "shot4_20260907_015256.png"),
         "prompt": """Photorealistic 3D animation, 4 seconds. Continuation from Shot 3. Final shot.
 The cat gently straightens up, resumes professional posture, eyes open wide with a warm sweet smile.
 The cat lifts the white ceramic mug with heart latte art with both paws and gently extends it toward the viewer.
