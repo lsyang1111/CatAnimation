@@ -39,18 +39,24 @@ GLOBAL_CONSTRAINTS = """
   - Fixed Lens: 50mm cinematic prime lens, f/2.8 aperture, zero lens distortion.
   - Fixed Framing: Medium Shot (chest-up view of Nini, showing the full countertop width from far-left POS machine to far-right Moka pot).
   - Fixed Horizon: The wooden countertop surface level must remain at the exact same vertical height in all 4 frames.
+- LOCKED PROP ORIENTATION & ROTATIONAL ANGLES (100% IDENTICAL IN ALL SHOTS):
+  - POS MACHINE ANGLES: Light grey casing with glowing green screen.
+    * In Shot 1: Held up in cat's right paw, facing straight forward toward camera (0-degree rotation).
+    * In Shot 2, Shot 3, Shot 4: Placed resting upright on far-left counter corner, facing STRAIGHT FORWARD toward camera (0-degree rotation, screen and 3x4 buttons facing viewer directly). NEVER rotated sideways or tilted at odd angles.
+  - MOKA POT ANGLES: Classic octagonal Bialetti Moka pot.
+    * Front face with mustache man logo faces STRAIGHT FORWARD toward camera in all shots.
+    * Black plastic handle points STRICTLY 90 DEGREES TO THE RIGHT side in all shots.
 - EXACT CAT FACIAL & FUR MARKINGS (100% IDENTICAL IN ALL SHOTS): Exactly match Reference Image 1 (Nini the calico cat). The head/forehead has light orange/ginger tabby fur patches with small tiger stripes, white snout/lower face, pink nose, and white chest. NO heavy solid black patches on forehead or ears. MUST match Shot 1 and Shot 3 fur coloring.
 - EXACT BACKGROUND LAYOUT (100% IDENTICAL IN ALL SHOTS):
   - Viewer's LEFT background: Professional stainless steel espresso machine.
   - Viewer's RIGHT background: Dark wooden shelves with coffee bean bags and glass jars, hanging amber Edison bulb lights with soft golden bokeh.
   - Ambient warm golden lighting.
 - EXACT COUNTERTOP OBJECT PLACEMENT (VIEWER'S PERSPECTIVE):
-  - Far LEFT counter: POS Machine location (held up in cat's right paw on viewer's left in Shot 1; set down resting on far-left counter corner in Shot 2, Shot 3, and Shot 4).
+  - Far LEFT counter: POS Machine location (held up in cat's right paw on viewer's left in Shot 1; set down resting on far-left counter corner facing camera in Shot 2, Shot 3, and Shot 4).
   - CENTER counter: ONE white ceramic mug.
   - Far RIGHT counter: Bialetti Moka Express pot (black handle strictly on RIGHT side, mustache man logo on front).
 - CAT-TO-MOKA-POT SCALE RATIO: Cat Nini is taller/larger than Moka pot in all shots (Moka pot reaches lower chest level only). Cat height and head size remain 100% IDENTICAL across all frames.
 - CAT APPEARANCE & CLOTHING: Exactly match Reference Image 1 (Nini the calico cat) wearing the EXACT SAME brown leather apron with neck strap and front pocket in ALL shots.
-- POS MACHINE APPEARANCE: Light grey front casing, glowing green screen at top, 3x4 numeric button grid layout. EXACT SAME in Shot 1, Shot 2, Shot 3, and Shot 4.
 - ONE white ceramic mug. NEVER changes shape, size, or style.
 - All objects obey gravity. Nothing floats.
 === END CONSTRAINTS ===
