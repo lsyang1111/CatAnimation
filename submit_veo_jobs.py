@@ -19,12 +19,15 @@ out_dir = os.path.dirname(os.path.abspath(__file__))
 SHOT_CONFIGS = [
     {
         "output_name": "shot1.mp4",
-        "image_path": os.path.join(out_dir, "storyboards", "shot1_20260904_215307.png"),
+        "image_path": os.path.join(out_dir, "storyboards", "shot1_20260909_220434.png"),
         "prompt": """Photorealistic 3D animation, 4 seconds. Fixed 50mm eye-level medium camera shot over counter.
-The cat barista holds a POS card reader facing straight forward toward the camera with its right paw.
-A credit card taps the device. The green screen light flashes with confirmation.
-The cat nods gently with a professional friendly smile, then slowly places the POS machine down on the far-left corner of the counter, set upright facing straight forward toward the camera.
-Smooth subtle cinematic camera motion, zero lens distortion. Warm golden ambient cafe lighting.""",
+SEQUENCE:
+1. (0.0s) The cat barista holds the POS card reader facing straight forward toward the camera with its right paw. She waits calmly and patiently.
+2. (0.8s) A customer's credit card gently taps the POS screen. The cat holds completely still — a brief 1-second pause while the payment processes.
+3. (2.0s) The POS screen suddenly lights up with a vivid, bright GLOWING GREEN light — the payment is confirmed. The green light radiates warmth.
+4. (2.8s) The cat gives a warm, professional nod and a gentle smile upon seeing the green confirmation.
+5. (3.4s) The cat slowly and smoothly places the POS machine down on the far-left corner of the counter, set upright facing straight forward toward the camera.
+Fixed camera, zero lens distortion. Warm golden ambient cafe lighting.""",
     },
     {
         "output_name": "shot2.mp4",

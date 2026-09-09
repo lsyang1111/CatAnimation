@@ -67,15 +67,20 @@ SHOTS = [
     {
         "id": "shot1",
         "title": "Shot 1（0–4s）：刷卡付款",
-        "description": "矮矮嬌小的妮妮穿棕圍裙，右爪持 POS 機（畫面左側）遞向鏡頭，綠燈確認後準備製作咖啡",
+        "description": "妮妮穿棕圍裙，右爪持 POS 機遞向鏡頭，顧客信用卡輕觸螢幕後有一段停頓，POS 螢幕出現亮綠燈顯示刷卡成功，妮妮確認後才將 POS 機收回左側吧檯角落",
         "prompt": """Photorealistic 3D rendered storyboard frame. Fixed 50mm medium shot over barista counter.
 A gentle calico cat named Nini (white fur with orange/ginger tabby head patches, green eyes, white chest, pink nose, short compact body height and torso)
 wearing a brown leather apron, standing behind a dark warm wooden barista counter inside a cozy ambient cafe.
 CAMERA & ANGLE: Eye-level tripod medium shot, perfectly straight facing the cat over the counter.
 BACKGROUND LAYOUT (STRICT): Professional stainless steel espresso machine on viewer's LEFT background; dark wooden shelves with coffee bags and glass jars on viewer's RIGHT background; hanging amber Edison bulb lights with golden bokeh.
 COUNTERTOP LAYOUT: Center has ONE empty white ceramic mug. Far RIGHT counter has ONE small classic Bialetti Moka Express octagonal aluminum Moka pot (mustache man logo on front, black handle strictly on RIGHT side).
-POS MACHINE: The cat holds ONE light grey POS card reader with glowing green screen up with its right paw on viewer's LEFT toward the camera.
-Green confirmation light glows on POS screen. Cat expression is professional and friendly.
+POS MACHINE ACTION SEQUENCE:
+  1. Cat holds the light grey POS card reader up with right paw toward the camera (viewer's LEFT).
+  2. A customer credit card touches the POS screen — the cat holds perfectly still, waiting.
+  3. A brief pause of 1-2 seconds while the screen processes — cat's expression calm and patient.
+  4. The POS screen lights up with a BRIGHT GLOWING GREEN SUCCESS LIGHT, confirming payment approved.
+  5. Only after seeing the green confirmation, the cat gives a warm professional nod and smile.
+The POS screen has a vivid, bright green glow radiating outward, clearly visible and eye-catching.
 Cinematic warm golden cafe lighting, 8K fur texture.""",
     },
     {
