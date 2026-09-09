@@ -54,7 +54,8 @@ GLOBAL_CONSTRAINTS = """
 - EXACT COUNTERTOP OBJECT PLACEMENT (VIEWER'S PERSPECTIVE):
   - Far LEFT counter: POS Machine location (held up in cat's right paw on viewer's left in Shot 1; set down resting on far-left counter corner facing camera in Shot 2, Shot 3, and Shot 4).
   - CENTER counter: ONE white ceramic mug.
-  - Far RIGHT counter: Bialetti Moka Express pot (black handle strictly on RIGHT side, mustache man logo on front).
+  - CENTER-RIGHT counter area: ONE small portable butane canister gas stove (卡式瓦斯爐) — compact, silver/grey metal body with blue flame burner. The Bialetti Moka pot sits ON TOP of this gas stove in Shot 2 and Shot 3, being heated. In Shot 4 the Moka pot is lifted off the stove.
+  - Far RIGHT counter: Bialetti Moka Express pot (black handle strictly on RIGHT side, mustache man logo on front) — sitting on the gas stove in Shot 2 & 3.
 - CAT-TO-MOKA-POT SCALE RATIO: Cat Nini is taller/larger than Moka pot in all shots (Moka pot reaches lower chest level only). Cat height and head size remain 100% IDENTICAL across all frames.
 - CAT APPEARANCE & CLOTHING: Exactly match Reference Image 1 (Nini the calico cat) wearing the EXACT SAME brown leather apron with neck strap and front pocket in ALL shots.
 - ONE white ceramic mug. NEVER changes shape, size, or style.
@@ -85,49 +86,48 @@ Cinematic warm golden cafe lighting, 8K fur texture.""",
     },
     {
         "id": "shot2",
-        "title": "Shot 2（4–8s）：倒咖啡，眼神飄向牛奶",
-        "description": "妮妮穿棕圍裙，左爪握摩卡壺把手倒咖啡，但眼神悄悄飄向旁邊的牛奶罐，露出渴望的神情",
+        "title": "Shot 2（4–8s）：將摩卡壺放上卡式瓦斯爐加熱，眼神飄向牛奶",
+        "description": "妮妮將摩卡壺放上卡式瓦斯爐點火加熱，等待咖啡煮開期間，眼神您您飄向旁邊的鮮奶，露出身不由己的淡淡請望",
         "prompt": """Photorealistic 3D rendered storyboard frame. Continuation from Shot 1. Fixed 50mm medium shot over barista counter (EXACT SAME CAMERA ANGLE AND DISTANCE AS SHOT 1).
 The cat's forehead is entirely light orange/ginger tabby fur with small tiger stripes. White snout, pink nose, white chest, green eyes. WEARING THE EXACT SAME BROWN LEATHER APRON WITH NECK STRAP AND FRONT POCKET.
 CAMERA & ANGLE: Eye-level tripod medium shot, perfectly straight facing the cat over the counter.
 BACKGROUND LAYOUT (EXACT SAME AS SHOT 1): Professional stainless steel espresso machine on viewer's LEFT background; dark wooden shelves with coffee bags on viewer's RIGHT background; hanging amber Edison lights with golden bokeh.
-COUNTERTOP LAYOUT (EXACT SAME AS SHOT 1):
-- Far LEFT counter: The EXACT SAME light grey POS card reader with glowing green screen rests ALONE on the far-left counter corner. The POS machine is resting untouched, upright on the counter.
-- CENTER counter: ONE white ceramic mug stationary in center receiving dark espresso from the Moka pot spout.
-- Next to the mug: ONE small white milk jug or glass of fresh white milk sits on the counter.
-- Far RIGHT: Cat uses its LEFT PAW (the paw on viewer's RIGHT side) to hold the Bialetti Moka pot by its RIGHT-SIDE black plastic handle, tilting the spout towards the center mug.
-- MOKA POT DETAILS: The iconic Bialetti mustache-man mascot logo and BIALETTI text clearly visible on the front. Black handle remains strictly on the RIGHT side.
-EXPRESSION: The cat's eyes drift sideways toward the milk jug with a longing, tempted expression — a gentle internal struggle between duty and desire. Slight cheek flush of temptation.
-Cinematic warm golden cafe lighting, 8K calico fur detail.""",
+COUNTERTOP LAYOUT:
+- Far LEFT counter: The EXACT SAME light grey POS card reader rests upright on the far-left counter corner, screen facing straight forward.
+- CENTER counter: ONE white ceramic mug sits on the counter. ONE small white milk jug sits next to the mug.
+- CENTER-RIGHT: ONE compact silver portable butane canister gas stove (卡式瓦斯爐) sits on the counter with a BLUE FLAME burning under it. The classic Bialetti Moka Express pot sits ON TOP of the gas stove being heated — octagonal aluminum body with mustache man logo facing forward, black handle strictly on the RIGHT side.
+ACTION: Nini has just placed the Moka pot on the gas stove and turned on the flame. She stands back slightly, hands at sides, watching and waiting for the coffee to brew. The blue gas flame glows beneath the Moka pot.
+EXPRESSION: While waiting, the cat's eyes drift sideways toward the white milk jug with a longing, tempted expression — a gentle internal struggle between duty and desire while her hands are idle.
+Cinematic warm golden cafe lighting with cool blue accent from gas flame, 8K calico fur detail.""",
     },
     {
         "id": "shot3",
-        "title": "Shot 3（8–12s）：自然品嚐鮮奶",
-        "description": "妮妮低頭自然輕鬆地喝一口鮮奶，眼睛微閉享受香醇奶香，神情十分放鬆自在與滿足",
+        "title": "Shot 3（8–12s）：艦咖啡煮開空檔，自然品嚐鮮奶",
+        "description": "摩卡壺在爐上煮著，妮妮艦首自然輕鬆地喝一口鮮奶，眼睛微閉享受香醇奶香，神情放鬆湿足",
         "prompt": """Photorealistic 3D rendered storyboard frame. Continuation from Shot 2. Fixed 50mm medium shot over barista counter (EXACT SAME CAMERA ANGLE AND DISTANCE AS SHOT 1 & 2).
 The cat's forehead is entirely light orange/ginger tabby fur. White snout, pink nose, white chest, green eyes. WEARING THE EXACT SAME BROWN LEATHER APRON.
 CAMERA & ANGLE: Eye-level tripod medium shot, perfectly straight facing the cat over the counter.
 BACKGROUND LAYOUT (EXACT SAME AS SHOT 1 & 2): Professional stainless steel espresso machine on viewer's LEFT background; dark wooden shelves on viewer's RIGHT background; hanging amber Edison lights with golden bokeh.
 COUNTERTOP LAYOUT:
-- Far LEFT counter: The EXACT SAME light grey POS machine rests on the far-left counter corner. The POS machine is resting untouched, upright on the counter.
-- CENTER counter: The white ceramic mug and small white milk jug are on the counter.
-- Far RIGHT counter: The EXACT SAME small Bialetti Moka pot sits on counter (black handle strictly on RIGHT side, logo on front).
-ACTION: Nini naturally takes a peaceful, gentle sip from the milk jug. She leans slightly forward with her eyes closed in pure relaxation and enjoyment, tasting the rich fresh milk. Her expression is calm, sweet, and content — completely natural, happy, and relaxed with no guilt or hesitation. A tiny drop of white milk rests gently on her pink nose.
-Soft warm golden cinematic lighting, 8K calico fur detail.""",
+- Far LEFT counter: The EXACT SAME light grey POS machine rests on the far-left counter corner, upright, screen facing straight forward.
+- CENTER counter: ONE white ceramic mug and ONE small white milk jug sit on the counter.
+- CENTER-RIGHT: The EXACT SAME compact silver portable butane gas stove (卡式瓦斯爐) with blue flame still burning. The Bialetti Moka pot remains on top of the gas stove, heating. A tiny wisp of steam rising from the Moka pot spout indicates the coffee is almost ready.
+ACTION: While the coffee brews, Nini naturally takes a peaceful, gentle sip from the milk jug. She leans slightly forward with her eyes closed in pure relaxation and enjoyment. A tiny drop of white milk rests gently on her pink nose. Her expression is calm, sweet, and content — natural and relaxed.
+Soft warm golden cinematic lighting with blue accent from gas flame, 8K calico fur detail.""",
     },
     {
         "id": "shot4",
-        "title": "Shot 4（12–16s）：假裝沒事，捧咖啡遞給客人",
-        "description": "妮妮迅速恢復職業笑容，嘴角還帶著一點點奶漬，雙爪捧著拉花咖啡遞向鏡頭，帶著甜蜜又有點心虛的笑容",
+        "title": "Shot 4（12–16s）：咖啡煮好倒入杯中，雙爪捨給客人",
+        "description": "摩卡壺煮開了！妮妮迅速把熱咖啡倒入馬克杯，做出愛心拉花，恢復職業笑容雙爪捨向鏡頭，嘴角還没洗干奶漬",
         "prompt": """Photorealistic 3D rendered storyboard frame. Final shot. Fixed 50mm medium shot over barista counter (EXACT SAME CAMERA ANGLE AND DISTANCE AS SHOT 1, 2 & 3).
 The cat's forehead is entirely light orange/ginger tabby fur. White snout, pink nose, white chest, bright green eyes. WEARING THE EXACT SAME BROWN LEATHER APRON.
 CAMERA & ANGLE: Eye-level tripod medium shot, perfectly straight facing the cat over the counter.
 BACKGROUND LAYOUT (EXACT SAME AS ALL PREVIOUS SHOTS): Professional stainless steel espresso machine on viewer's LEFT background; dark wooden shelves on viewer's RIGHT background; hanging amber Edison lights with golden bokeh.
 COUNTERTOP LAYOUT:
-- Far LEFT counter: The EXACT SAME light grey POS machine rests on the far-left counter corner. The POS machine is resting untouched, upright on the counter.
-- CENTER counter: Cat holds ONE white ceramic mug with a beautiful heart latte art on top with BOTH PAWS, extending it warmly toward the viewer.
-- Far RIGHT counter: The EXACT SAME small Bialetti Moka pot sits on counter (black handle strictly on RIGHT side, logo on front).
-EXPRESSION: A sweet, warm, professional barista smile — but with a tiny hint of guilt and mischief in the eyes, as if she is hoping the customer did not notice she sipped the milk. A nearly invisible tiny white milk residue trace remains at the very corner of her lip. Eyes are twinkling with a cheerful, slightly sheepish warmth.
+- Far LEFT counter: The EXACT SAME light grey POS machine rests on the far-left counter corner, upright, screen facing straight forward.
+- CENTER counter: Cat holds ONE white ceramic mug with a beautiful heart latte art on top with BOTH PAWS, extending it warmly toward the viewer. A tiny nearly-invisible white milk residue trace remains at the very corner of the cat's lip.
+- CENTER-RIGHT: The compact silver portable butane gas stove (卡式瓦斯爐) flame is now OFF. The Bialetti Moka pot has been lifted off the stove and set beside it — its job is done, fresh hot coffee has just been poured.
+EXPRESSION: A sweet, warm, professional barista smile — eyes twinkling with cheerful warmth, as if completely composed and professional. A nearly invisible tiny white milk residue trace at the very corner of her lip hints at the secret she's keeping.
 Soft warm golden cinematic lighting, 8K calico fur texture.""",
     },
 ]
