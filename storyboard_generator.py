@@ -52,10 +52,10 @@ GLOBAL_CONSTRAINTS = """
   - Viewer's RIGHT background: Dark wooden shelves with coffee bean bags and glass jars, hanging amber Edison bulb lights with soft golden bokeh.
   - Ambient warm golden lighting.
 - EXACT COUNTERTOP OBJECT PLACEMENT (VIEWER'S PERSPECTIVE):
-  - Far LEFT counter: POS Machine location (held up in cat's right paw on viewer's left in Shot 1; set down resting on far-left counter corner facing camera in Shot 2, Shot 3, and Shot 4).
+  - Far LEFT counter: POS Machine (held up in cat's right paw in Shot 1; resting upright on far-left counter corner facing camera in Shot 2, 3, and 4).
   - CENTER counter: ONE white ceramic mug.
-  - CENTER-RIGHT counter area: ONE small portable butane canister gas stove (卡式瓦斯爐) — compact, silver/grey metal body with blue flame burner. The Bialetti Moka pot sits ON TOP of this gas stove in Shot 2 and Shot 3, being heated. In Shot 4 the Moka pot is lifted off the stove.
-  - Far RIGHT counter: Bialetti Moka Express pot (black handle strictly on RIGHT side, mustache man logo on front) — sitting on the gas stove in Shot 2 & 3.
+  - CENTER-RIGHT counter: ONE compact silver portable butane canister gas stove (卡式瓦斯爐). THERE IS ONLY ONE MOKA POT IN THE ENTIRE SCENE — it sits ON TOP of the gas stove in ALL shots. NEVER place the Moka pot separately on the counter.
+  - The Bialetti Moka Express (black handle on RIGHT side, mustache logo on front) is ALWAYS on the gas stove — unlit in Shot 1, blue flame burning in Shot 2 & 3, flame off in Shot 4.
 - CAT-TO-MOKA-POT SCALE RATIO: Cat Nini is taller/larger than Moka pot in all shots (Moka pot reaches lower chest level only). Cat height and head size remain 100% IDENTICAL across all frames.
 - CAT APPEARANCE & CLOTHING: Exactly match Reference Image 1 (Nini the calico cat) wearing the EXACT SAME brown leather apron with neck strap and front pocket in ALL shots.
 - ONE white ceramic mug. NEVER changes shape, size, or style.
@@ -74,7 +74,11 @@ A gentle calico cat named Nini (white fur with orange/ginger tabby head patches,
 wearing a brown leather apron, standing behind a dark warm wooden barista counter inside a cozy ambient cafe.
 CAMERA & ANGLE: Eye-level tripod medium shot, perfectly straight facing the cat over the counter.
 BACKGROUND LAYOUT (STRICT): Professional stainless steel espresso machine on viewer's LEFT background; dark wooden shelves with coffee bags and glass jars on viewer's RIGHT background; hanging amber Edison bulb lights with golden bokeh.
-COUNTERTOP LAYOUT: Center has ONE empty white ceramic mug. Far RIGHT counter has ONE small classic Bialetti Moka Express octagonal aluminum Moka pot (mustache man logo on front, black handle strictly on RIGHT side).
+COUNTERTOP LAYOUT:
+- Far LEFT counter: Cat holds ONE light grey POS card reader up with right paw toward camera.
+- CENTER counter: ONE empty white ceramic mug.
+- CENTER-RIGHT counter: ONE compact silver portable butane gas stove (卡式瓦斯爐) — flame OFF, not yet lit. The classic Bialetti Moka Express pot sits ON TOP of the gas stove (octagonal aluminum body, mustache man logo facing forward, black handle strictly on RIGHT side). The gas stove is cold — no flame, no steam. It is waiting to be used.
+THERE IS ONLY ONE MOKA POT. It is ON the gas stove. Do NOT place any Moka pot separately on the counter.
 POS MACHINE ACTION SEQUENCE:
   1. Cat holds the light grey POS card reader up with right paw toward the camera (viewer's LEFT).
   2. A customer credit card touches the POS screen — the cat holds perfectly still, waiting.
