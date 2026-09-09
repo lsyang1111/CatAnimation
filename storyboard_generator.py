@@ -34,18 +34,23 @@ POS_REF_PATH = r"C:\Users\lsyan\Documents\Code\CatAnimation\pos_reference.png"
 # 全局硬性規則（會自動加到每段 prompt 前面）
 GLOBAL_CONSTRAINTS = """
 === HARD CONSTRAINTS (NEVER VIOLATE) ===
+- LOCKED CAMERA PERSPECTIVE & LENS (100% IDENTICAL CAMERA RIG IN ALL SHOTS):
+  - Fixed Tripod Camera Angle: Eye-level perspective directly facing Nini across the barista counter (customer viewpoint).
+  - Fixed Lens: 50mm cinematic prime lens, f/2.8 aperture, zero lens distortion.
+  - Fixed Framing: Medium Shot (chest-up view of Nini, showing the full countertop width from far-left POS machine to far-right Moka pot).
+  - Fixed Horizon: The wooden countertop surface level must remain at the exact same vertical height in all 4 frames.
 - EXACT CAT FACIAL & FUR MARKINGS (100% IDENTICAL IN ALL SHOTS): Exactly match Reference Image 1 (Nini the calico cat). The head/forehead has light orange/ginger tabby fur patches with small tiger stripes, white snout/lower face, pink nose, and white chest. NO heavy solid black patches on forehead or ears. MUST match Shot 1 and Shot 3 fur coloring.
 - EXACT BACKGROUND LAYOUT (100% IDENTICAL IN ALL SHOTS):
   - Viewer's LEFT background: Professional stainless steel espresso machine.
   - Viewer's RIGHT background: Dark wooden shelves with coffee bean bags and glass jars, hanging amber Edison bulb lights with soft golden bokeh.
-  - Ambient moka_cat_12s warm golden lighting.
+  - Ambient warm golden lighting.
 - EXACT COUNTERTOP OBJECT PLACEMENT (VIEWER'S PERSPECTIVE):
-  - Far LEFT counter: POS Machine location (held up in cat's right paw on viewer's left in Shot 1; set down resting on far-left counter corner in Shot 2 and Shot 3).
+  - Far LEFT counter: POS Machine location (held up in cat's right paw on viewer's left in Shot 1; set down resting on far-left counter corner in Shot 2, Shot 3, and Shot 4).
   - CENTER counter: ONE white ceramic mug.
   - Far RIGHT counter: Bialetti Moka Express pot (black handle strictly on RIGHT side, mustache man logo on front).
 - CAT-TO-MOKA-POT SCALE RATIO: Cat Nini is taller/larger than Moka pot in all shots (Moka pot reaches lower chest level only). Cat height and head size remain 100% IDENTICAL across all frames.
 - CAT APPEARANCE & CLOTHING: Exactly match Reference Image 1 (Nini the calico cat) wearing the EXACT SAME brown leather apron with neck strap and front pocket in ALL shots.
-- POS MACHINE APPEARANCE: Light grey front casing, glowing green screen at top, 3x4 numeric button grid layout. EXACT SAME in Shot 1, Shot 2, and Shot 3.
+- POS MACHINE APPEARANCE: Light grey front casing, glowing green screen at top, 3x4 numeric button grid layout. EXACT SAME in Shot 1, Shot 2, Shot 3, and Shot 4.
 - ONE white ceramic mug. NEVER changes shape, size, or style.
 - All objects obey gravity. Nothing floats.
 === END CONSTRAINTS ===
@@ -57,9 +62,10 @@ SHOTS = [
         "id": "shot1",
         "title": "Shot 1（0–4s）：刷卡付款",
         "description": "矮矮嬌小的妮妮穿棕圍裙，右爪持 POS 機（畫面左側）遞向鏡頭，綠燈確認後準備製作咖啡",
-        "prompt": """Photorealistic 3D rendered storyboard frame. A gentle calico cat named Nini
-(white fur with orange/ginger tabby head patches, green eyes, white chest, pink nose, short compact body height and torso)
+        "prompt": """Photorealistic 3D rendered storyboard frame. Fixed 50mm medium shot over barista counter.
+A gentle calico cat named Nini (white fur with orange/ginger tabby head patches, green eyes, white chest, pink nose, short compact body height and torso)
 wearing a brown leather apron, standing behind a dark warm wooden barista counter inside a cozy ambient cafe.
+CAMERA & ANGLE: Eye-level tripod medium shot, perfectly straight facing the cat over the counter.
 BACKGROUND LAYOUT (STRICT): Professional stainless steel espresso machine on viewer's LEFT background; dark wooden shelves with coffee bags and glass jars on viewer's RIGHT background; hanging amber Edison bulb lights with golden bokeh.
 COUNTERTOP LAYOUT: Center has ONE empty white ceramic mug. Far RIGHT counter has ONE small classic Bialetti Moka Express octagonal aluminum Moka pot (mustache man logo on front, black handle strictly on RIGHT side).
 POS MACHINE: The cat holds ONE light grey POS card reader with glowing green screen up with its right paw on viewer's LEFT toward the camera.
@@ -70,8 +76,9 @@ Cinematic warm golden cafe lighting, 8K fur texture.""",
         "id": "shot2",
         "title": "Shot 2（4–8s）：倒咖啡，眼神飄向牛奶",
         "description": "妮妮穿棕圍裙，左爪握摩卡壺把手倒咖啡，但眼神悄悄飄向旁邊的牛奶罐，露出渴望的神情",
-        "prompt": """Photorealistic 3D rendered storyboard frame. Continuation from Shot 1.
+        "prompt": """Photorealistic 3D rendered storyboard frame. Continuation from Shot 1. Fixed 50mm medium shot over barista counter (EXACT SAME CAMERA ANGLE AND DISTANCE AS SHOT 1).
 The cat's forehead is entirely light orange/ginger tabby fur with small tiger stripes. White snout, pink nose, white chest, green eyes. WEARING THE EXACT SAME BROWN LEATHER APRON WITH NECK STRAP AND FRONT POCKET.
+CAMERA & ANGLE: Eye-level tripod medium shot, perfectly straight facing the cat over the counter.
 BACKGROUND LAYOUT (EXACT SAME AS SHOT 1): Professional stainless steel espresso machine on viewer's LEFT background; dark wooden shelves with coffee bags on viewer's RIGHT background; hanging amber Edison lights with golden bokeh.
 COUNTERTOP LAYOUT (EXACT SAME AS SHOT 1):
 - Far LEFT counter: The EXACT SAME light grey POS card reader with glowing green screen rests ALONE on the far-left counter corner. The POS machine is resting untouched, upright on the counter.
@@ -86,8 +93,9 @@ Cinematic warm golden cafe lighting, 8K calico fur detail.""",
         "id": "shot3",
         "title": "Shot 3（8–12s）：自然品嚐鮮奶",
         "description": "妮妮低頭自然輕鬆地喝一口鮮奶，眼睛微閉享受香醇奶香，神情十分放鬆自在與滿足",
-        "prompt": """Photorealistic 3D rendered storyboard frame. Continuation from Shot 2. Close-up or medium shot.
+        "prompt": """Photorealistic 3D rendered storyboard frame. Continuation from Shot 2. Fixed 50mm medium shot over barista counter (EXACT SAME CAMERA ANGLE AND DISTANCE AS SHOT 1 & 2).
 The cat's forehead is entirely light orange/ginger tabby fur. White snout, pink nose, white chest, green eyes. WEARING THE EXACT SAME BROWN LEATHER APRON.
+CAMERA & ANGLE: Eye-level tripod medium shot, perfectly straight facing the cat over the counter.
 BACKGROUND LAYOUT (EXACT SAME AS SHOT 1 & 2): Professional stainless steel espresso machine on viewer's LEFT background; dark wooden shelves on viewer's RIGHT background; hanging amber Edison lights with golden bokeh.
 COUNTERTOP LAYOUT:
 - Far LEFT counter: The EXACT SAME light grey POS machine rests on the far-left counter corner. The POS machine is resting untouched, upright on the counter.
@@ -100,8 +108,9 @@ Soft warm golden cinematic lighting, 8K calico fur detail.""",
         "id": "shot4",
         "title": "Shot 4（12–16s）：假裝沒事，捧咖啡遞給客人",
         "description": "妮妮迅速恢復職業笑容，嘴角還帶著一點點奶漬，雙爪捧著拉花咖啡遞向鏡頭，帶著甜蜜又有點心虛的笑容",
-        "prompt": """Photorealistic 3D rendered storyboard frame. Final shot. Close-up inside cozy ambient cafe.
+        "prompt": """Photorealistic 3D rendered storyboard frame. Final shot. Fixed 50mm medium shot over barista counter (EXACT SAME CAMERA ANGLE AND DISTANCE AS SHOT 1, 2 & 3).
 The cat's forehead is entirely light orange/ginger tabby fur. White snout, pink nose, white chest, bright green eyes. WEARING THE EXACT SAME BROWN LEATHER APRON.
+CAMERA & ANGLE: Eye-level tripod medium shot, perfectly straight facing the cat over the counter.
 BACKGROUND LAYOUT (EXACT SAME AS ALL PREVIOUS SHOTS): Professional stainless steel espresso machine on viewer's LEFT background; dark wooden shelves on viewer's RIGHT background; hanging amber Edison lights with golden bokeh.
 COUNTERTOP LAYOUT:
 - Far LEFT counter: The EXACT SAME light grey POS machine rests on the far-left counter corner. The POS machine is resting untouched, upright on the counter.
